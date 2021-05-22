@@ -1,0 +1,59 @@
+version: "3.9"
+services:
+  node:
+    image: node:latest
+    ports:
+      - "80:80"
+      - "3000:3000"
+      - "443:443"
+      - "35729:35729" #for hotreloading
+    volumes: 
+      - ./sq-react:/usr/src/app
+    #   - .:/usr/src/app
+    working_dir: /usr/src/app
+    stdin_open: true
+    tty: true
+    environment: 
+      - CHOKIDAR_USEPOLLING=true #requried for docker and VM
+      # - DEBUG=express
+      # - NODE_ENV=dev
+    # command: tail -f /dev/null #container will not stop on begging
+    command: yarn start #bash
+    # command: yarn dev #bash
+    # command: yarn server #bash
+    # command: npm install #bash
+
+###USAGE:    
+# run docker-compose up --detach
+# docker exec -it CONTAINER_NAME bash
+#propably:
+# docker exec -it monsters-rolodex_node_1 bash
+
+# run as command
+#docker run -p 3000:3000 -p 35729:35729 -e CHOKIDAR_USEPOLLING=true -v `pwd`:/usr/src/app:rw -w /usr/src/app -it 56bc npx npm start
+#docker run -p 3000:3000 -e CHOKIDAR_USEPOLLING=true -v `pwd`:/usr/src/app:rw -w /usr/src/app -it --rm 56bc npx create-react-app crwn-clothing
+
+    # deploy:
+    #   replicas: 1
+    # configs:
+    #   - my_config
+    #   - my_other_config
+# configs:
+#   my_config:
+#     file: ./my_config.txt
+#   my_other_config:
+#     external: true
+
+
+
+# docker-compose -f docker-compose_react.yaml up
+
+# https://coolors.co/da1b2b-2b303a-f2fdff-2892d7-a8c256
+# https://coolors.co/da1b2b-2b303a-f2fdff-7286a0-f0e100
+# https://coolors.co/da1b2b-2b303a-f2fdff-678d58-709775
+# https://coolors.co/da1b2b-2b303a-f2fdff-ffc100-58641d
+# https://coolors.co/da1b2b-2b303a-f2fdff-33673b-1b9aaa
+# https://coolors.co/da1b2b-2b303a-f2fdff-9f956c-1b998b
+# https://coolors.co/da1b2b-2b303a-f2fdff-7a9b76-ffbc42
+
+# npx create-react-app my-app --template cra-template-pwa
