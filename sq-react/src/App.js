@@ -7,6 +7,7 @@ import HomePage from './pages/homepage/homepage.component';
 import HeaderComponent from './components/header/header.component';
 import GigsComponent from './pages/gigs/gigs.component';
 import NewsComponent from './pages/news/news.component';
+import BandComponent from './pages/band/band.component';
 
 
 import {GlobalStyle} from './global.styles'
@@ -19,6 +20,7 @@ function App() {
       <Route exact path={'/'} component={HomePage} />
       <Route path={'/gigs'} component={GigsComponent} />
       <Route path={'/news'} component={NewsComponent} />
+      <Route path={'/band'} component={BandComponent} />
       
     </div>
   );
