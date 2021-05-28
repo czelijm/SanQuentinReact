@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom';
+import {ApolloClient, InMemoryCache, ApolloProvider, HttpLink} from '@apollo/client';
 
 import './index.css';
 
@@ -9,12 +10,30 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
+
+const httpLink = new HttpLink(
+  {
+     uri: 'http://localhost:8080/graphql' 
+  }
+);
+
+const client = new ApolloClient({
+  // uri: 'http://localhost:8080/graphql',
+  link:httpLink,
+  cache: new InMemoryCache()
+  // ,fetchOptions: {
+  //   mode: 'no-cors'
+  // }
+});
+
 ReactDOM.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </BrowserRouter>
+  <ApolloProvider client={client}>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </ApolloProvider>
   ,document.getElementById('root')
 );
 

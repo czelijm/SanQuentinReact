@@ -1,5 +1,5 @@
 import React from 'react';
-import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from './header.styles';
+//import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from './header.styles';
 
 import {Navbar, Nav} from 'react-bootstrap';
 
