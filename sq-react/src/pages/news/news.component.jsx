@@ -1,10 +1,15 @@
 import React from 'react';
+import {Route} from 'react-router-dom'
+import NewsItemDetails from '../../components/news-item-details/news-item-details.component';
+
 import NewsOverviewContainer from '../../components/news-overview/news-overview.container'
 
-const NewsComponent = () => (
+const NewsComponent = ({match}) => (
     <div className = 'news'>
-        SQ's news
-        <NewsOverviewContainer></NewsOverviewContainer>
+        <Route exact path={`${match.path}`} component={NewsOverviewContainer}></Route>
+        <Route path={`${match.path}/:newsId`} render={()=><NewsItemDetails/>}></Route>
+        {/* <Route exact path={`${match.path}/:newsId`} component={<NewsItemDetails/>}></Route> */}
+        {/* <NewsOverviewContainer></NewsOverviewContainer> */}
     </div>
 )
 

@@ -27,9 +27,9 @@ const HeaderComponent = () => (
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="news">Newsy</Nav.Link>
-                <Nav.Link href="gigs">Koncerty</Nav.Link>
-                <Nav.Link href="band">Zespół</Nav.Link>
+                <Nav.Link href="/news">Newsy</Nav.Link>
+                <Nav.Link href="/gigs">Koncerty</Nav.Link>
+                <Nav.Link href="/band">Zespół</Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>
