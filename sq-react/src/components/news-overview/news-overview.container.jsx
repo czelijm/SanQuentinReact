@@ -3,10 +3,10 @@ import {useQuery} from '@apollo/client'
 
 import {NewsOverviewContainerDiv} from './news-overview.styles'
 
-import {GET_ALL_NEWS} from '../../querries/news/news.querry'
+import {GET_ALL_NEWS} from '../../queries/news/news.query'
 // import { Spinner } from 'react-bootstrap';s
 import SpinnerAbsolute from '../spinner/spinner.component'
-import { getAllNewsDataFromResponse } from '../../querries/news/news.process-data';
+import { getAllNewsDataFromResponse } from '../../queries/news/news.process-data';
 import NewsItem from '../news-item/news-item.component';
 
 const NewsOverviewContainer = () =>{
@@ -25,7 +25,7 @@ const NewsOverviewContainer = () =>{
         <NewsOverviewContainerDiv>
             {postsArray.map(p=>(
                 <NewsItem key={p.id} item={p}/>
-                
+
             ))}
         </NewsOverviewContainerDiv>
     )};

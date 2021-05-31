@@ -1,9 +1,10 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
 import {useQuery} from '@apollo/client'
-import { GET_NEWS_BY_ID } from '../../querries/news/news.querry';
+import { GET_NEWS_BY_ID } from '../../queries/news/news.query';
 import SpinnerAbsolute from '../spinner/spinner.component';
-import { getNewsDataFromResponse } from '../../querries/news/news.process-data';
+import { getNewsDataFromResponse } from '../../queries/news/news.process-data';
+import { NewsDetailsBackgroundPlate,NewsDetailsTitle } from './news-item-details.styles';
 
 
 const NewsItemDetails = ({match}) => {
@@ -20,11 +21,12 @@ const NewsItemDetails = ({match}) => {
     console.log(postContent);
 
     return(
-    <div>
+    <NewsDetailsBackgroundPlate>
         {/* {match.params.newsId} */}
-        <h2>{postContent.title}</h2>
+        <NewsDetailsTitle>{postContent.title}</NewsDetailsTitle>
+        {/* <br/> */}
         <div dangerouslySetInnerHTML={{ __html: postContent.content }} />
-    </div>
+    </NewsDetailsBackgroundPlate>
 )}
 
 export default NewsItemDetails;
