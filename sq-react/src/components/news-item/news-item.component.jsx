@@ -1,8 +1,9 @@
 import React from 'react';
 import {Row,Col,Container} from 'react-bootstrap';
-import {Link, useLocation} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom';
+import Button from '../button/button.component'
 
-import {NewsItemContainer,NewsTitle,NewsImage, NewsDetailsButton,NewsDetailsTitleBox} from './news-item.styles'
+import {NewsItemContainer,NewsTitle,NewsImage, NewsDetailsButton,NewsDetailsTitleBox, NewsDetailsRow,NewsDetailsImageBox,NewsDetailsButtonBox} from './news-item.styles'
 
 const NewsItem = ({item:{title,image,id}}) => {
     
@@ -24,23 +25,23 @@ const NewsItem = ({item:{title,image,id}}) => {
                 {/* <Button variant="primary">Go somewhere</Button> */}
             {/* </Card.Body> */}
         {/* </Card> */}
-        <Container>
-            <Row>
-                <Col xs={12} md={4}>
+        {/* <Container> */}
+            <NewsDetailsRow>
+                <NewsDetailsImageBox xs={12} lg={4}>
                 {
                     image? <NewsImage src={image} alt='img'/> :<div></div>
                 }
-                </Col>
-                <NewsDetailsTitleBox xs={12} md={4}>
+                </NewsDetailsImageBox>
+                <NewsDetailsTitleBox xs={12} lg={4}>
                     <NewsTitle>{title}</NewsTitle>
-                    <NewsDetailsButton to={`${pathname}/${id}`}>Obczaj to!</NewsDetailsButton>
+                    {/* <NewsDetailsButton to={`${pathname}/${id}`}>Obczaj to!</NewsDetailsButton> */}
                 </NewsDetailsTitleBox>
-                <Col xs={12} md={6}>
+                <NewsDetailsButtonBox xs={12} lg={4}>
                     <NewsDetailsButton to={`${pathname}/${id}`}>Obczaj to!</NewsDetailsButton>
-                </Col>
+                </NewsDetailsButtonBox>
                 {/* {match} */}
-            </Row>
-        </Container>
+            </NewsDetailsRow>
+        {/* </Container> */}
 
         {/* <p>{title}</p>
         {
