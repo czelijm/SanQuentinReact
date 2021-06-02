@@ -15,7 +15,7 @@ const NewsItem = ({item:{title,image,id}}) => {
     // console.log(pathname);
 
     return(
-    <NewsItemContainer>
+    <NewsItemContainer className="justify-content-start">
         {/* <Card style={{ width: '18rem', backgroundColor: 'black', display: 'flex' }}>
             <Card.Img src={image} />
             <Card.Body>
@@ -26,17 +26,19 @@ const NewsItem = ({item:{title,image,id}}) => {
             {/* </Card.Body> */}
         {/* </Card> */}
         {/* <Container> */}
-            <NewsDetailsRow>
-                <NewsDetailsImageBox xs={12} lg={4}>
+            <NewsDetailsRow className="align-items-center">
+                <NewsDetailsImageBox xs={12} lg={3}>
                 {
                     image? <NewsImage src={image} alt='img'/> :<div></div>
                 }
                 </NewsDetailsImageBox>
-                <NewsDetailsTitleBox xs={12} lg={4}>
-                    <NewsTitle>{title}</NewsTitle>
+                <NewsDetailsTitleBox xs={12}  lg={{ span: 4, offset: 1 }} >
+                    {/* <Row > */}
+                        <NewsTitle>{title}</NewsTitle>
+                    {/* </Row> */}
                     {/* <NewsDetailsButton to={`${pathname}/${id}`}>Obczaj to!</NewsDetailsButton> */}
                 </NewsDetailsTitleBox>
-                <NewsDetailsButtonBox xs={12} lg={4}>
+                <NewsDetailsButtonBox className="align-self-end"  xs={12}  lg={{ span: 3, offset: 1 }}>
                     <NewsDetailsButton to={`${pathname}/${id}`}>Obczaj to!</NewsDetailsButton>
                 </NewsDetailsButtonBox>
                 {/* {match} */}

@@ -1,8 +1,16 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 // import {Link} from 'react-router-dom';
 import {Col,Row} from 'react-bootstrap';
 
 import Button from '../button/button.component';
+
+const ResponsiveSupport = css`
+    @media only screen and (max-width: 991px){
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+`
 
 export const NewsItemContainer = styled.div`
     background-color:#2b303a;
@@ -12,9 +20,8 @@ export const NewsItemContainer = styled.div`
     margin-top:2%;
     margin-bottom:1%;
     border-radius:4px;
-    /* display:flex; */
-    /* justify-content:space-between; */
-    /* position: relative; */
+    /* display:inline-flexbox; */
+    /* width:100%; */
 `;
 
 export const NewsImage = styled.img`
@@ -22,16 +29,7 @@ export const NewsImage = styled.img`
 `;
 
 export const NewsTitle = styled.h3`
-    /* text-align:center; */
-    /* display:flex; */
-    /* justify-content:center;
-    align-items: center; */
-    @media only screen and (max-width: 991px){
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
-
+    ${ResponsiveSupport}
 `;
 
 export const NewsDetailsButton = styled(Button)`
@@ -39,55 +37,43 @@ export const NewsDetailsButton = styled(Button)`
 `;
 
 export const ImageContainer = styled.div`
-    width: 20%;
+/* display:inline-flexbox; */
+    /* width: 18rem;
+    height:auto;
+    margin:0;
+    display:flex;
+    padding: 10px; */
 `;
 
 export const NewsDetailsTitleBox = styled(Col)`
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin-left:0;
+    /* margin-left:5%; */
+    /* padding:0px; */
     /* position: absolute;
     top: 50%;
     left: 50%; */
 `;
 
 export const NewsDetailsImageBox = styled(Col)`
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin-left:0;
+    /* margin-left:0;
+    padding:0; */
+    /* width: 18rem !important; */
     /* position: absolute;
     top: 50%;
     left: 50%; */
-    @media only screen and (max-width: 991px){
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
+    ${ResponsiveSupport}
 `;
 
 export const NewsDetailsButtonBox = styled(Col)`
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin-left:0;
+    /* margin-left:0; */
+    /* padding:30px; */
     /* position: absolute;
     top: 50%;
     left: 50%; */
-    @media only screen and (max-width: 991px){
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
+    ${ResponsiveSupport}
 `;
 
 export const NewsDetailsRow = styled(Row)`
-    margin-left:0;
+    /* margin-left:0; */
     /* justify-content: space-between; */
-    @media only screen and (max-width: 991px){
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
+    ${ResponsiveSupport}
 `;

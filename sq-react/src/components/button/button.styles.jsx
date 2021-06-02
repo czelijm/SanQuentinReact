@@ -11,7 +11,8 @@ export const ButtonCustom = styled.button`
     border-width:1px;
     font-size:1.25rem;
     color:#f2fdff;
-    
+    width:75%;
+    height:auto;
 
     &:hover {
       background-color: #121317;
