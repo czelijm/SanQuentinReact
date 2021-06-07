@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 
 
-export const BandContainer = styled.div`
+export const BandContainerStyled = styled.div`
 
 ` 

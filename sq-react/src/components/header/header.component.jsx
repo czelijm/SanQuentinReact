@@ -21,7 +21,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //     </HeaderContainer>
 // )
 
-const HeaderComponent = () => (
+const Header = () => (
     <Navbar style={{color:'white'}} variant='dark' expand="lg">
         <Navbar.Brand href="/"> <Logo className='logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,9 +30,10 @@ const HeaderComponent = () => (
                 <Nav.Link href="/news">Newsy</Nav.Link>
                 <Nav.Link href="/gigs">Koncerty</Nav.Link>
                 <Nav.Link href="/band">Zespół</Nav.Link>
+                <Nav.Link href="/contact">Kontakt</Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>
 )
 
-export default HeaderComponent;
+export default Header;

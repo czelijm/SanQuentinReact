@@ -1,11 +1,15 @@
 import React from 'react';
-import {BandContainer} from './band.styles'
 
-const BandComponent = () => (
-    <BandContainer>
-        <h2>Band Menbers</h2>
-    </BandContainer>
-)
+import { BandContainerStyled} from './band.styles'
+import BandContainer from '../../components/band-container/band-container.component';
+
+const BandComponent = () => {
+
+    return(
+        <BandContainerStyled>
+            <BandContainer/>
+        </BandContainerStyled>
+)}
 
 export default BandComponent;
 
