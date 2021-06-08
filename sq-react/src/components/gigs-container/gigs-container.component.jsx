@@ -5,6 +5,7 @@ import {GigsContainerStyled} from './gigs-container.styles'
 import { GET_ALL_GIGS } from '../../queries/gigs/gigs.query';
 import SpinnerAbsolute from '../spinner/spinner.component';
 import { getAllGigsDataFromResponse, prepareGigsArray } from '../../queries/gigs/gigs.process-data';
+import GigsOverview from '../gigs-overview/gigs-overview.component';
 
 const GigsContainer = () =>{
     const { loading, error, data } = useQuery(GET_ALL_GIGS);
@@ -14,12 +15,13 @@ const GigsContainer = () =>{
 
     const gigs = prepareGigsArray(getAllGigsDataFromResponse(data));
 
-    console.log(data);
+    // console.log(data);
     console.log(gigs);
 
     return(
         <GigsContainerStyled>
             Gigs HERE
+            <GigsOverview gigs={gigs}/>
             {/* {data} */}
         </GigsContainerStyled>
     )

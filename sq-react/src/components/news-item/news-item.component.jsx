@@ -1,7 +1,7 @@
 import React from 'react';
-import {Row,Col,Container} from 'react-bootstrap';
-import {Link, useLocation} from 'react-router-dom';
-import Button from '../button/button.component'
+// import {Row,Col,Container} from 'react-bootstrap';
+import {useLocation} from 'react-router-dom';
+// import Button from '../button/button.component'
 
 import {NewsItemContainer,NewsTitle,NewsImage, NewsDetailsButton,NewsDetailsTitleBox, NewsDetailsRow,NewsDetailsImageBox,NewsDetailsButtonBox} from './news-item.styles'
 

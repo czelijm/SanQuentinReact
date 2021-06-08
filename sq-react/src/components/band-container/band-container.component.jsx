@@ -5,7 +5,7 @@ import SpinnerAbsolute from '../spinner/spinner.component';
 
 import {BandComponent} from './band-container.styles';
 import BandOverview from '../band-overview/band-overview.component';
-import { getAllBandMembersDataFromResponse, getTagElementArrayFromStringContent, prepareBandMember, prepareBandMembersArray } from '../../queries/band-members/band-members.process-data';
+import { getAllBandMembersDataFromResponse,  prepareBandMembersArray } from '../../queries/band-members/band-members.process-data';
 
 const BandContainer = () => {
     const { loading, error, data } = useQuery(GET_ALL_BANDMEMBERS);
@@ -24,7 +24,7 @@ const BandContainer = () => {
     return(
         <BandComponent>
             <h2>Band Menbers</h2>
-            <BandOverview/>
+            <BandOverview band={band}/>
         </BandComponent>
 )}
 
