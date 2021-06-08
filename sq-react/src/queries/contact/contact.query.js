@@ -1,23 +1,22 @@
 import {gql} from '@apollo/client';
 
 
-export const GET_ALL_CONTACT = gql`
-    {
-        posts(where: {categoryName: "contact"}) {
-            edges {
-                node {
-                    id
-                    title
-                    featuredImage {
-                        node {
-                            sourceUrl
-                        }
+export const GET_ALL_CONTACT = gql`{
+    posts(where: {categoryName: "contact"}) {
+        edges {
+            node {
+                id
+                title
+                featuredImage {
+                    node {
+                        sourceUrl
                     }
-                    content
                 }
+                content
             }
         }
     }
+}
 
 `
 

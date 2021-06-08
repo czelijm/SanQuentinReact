@@ -19,7 +19,7 @@ export const getTagElementArrayFromStringContent = (content,tag) => {
 export const prepareBandMember = (member) =>{
     var mockHtml = document.createElement( 'html' );
     mockHtml.innerHTML = member.content;
-    const innerImage = mockHtml.getElementsByTagName('img')[0].currentSrc;
+    const innerImage = mockHtml.getElementsByTagName('img')[0].src;
     //convert to array
     const descriptionArray = [...mockHtml.getElementsByTagName('p')].map(p=>p.innerText);
     return {
