@@ -8,6 +8,11 @@ export const GlobalStyle = createGlobalStyle`
         padding: 20px 60px;
         ${'' /* font-family: 'Open Sans Condensed', sans-serif; */}
         ${'' /* color: #da1b2b; */}
+        
+        @media screen and (max-width:800px){
+        padding: 0;
+        /* margin-bottom: 20px; */
+        }
     }
     a{
         text-decoration: none;

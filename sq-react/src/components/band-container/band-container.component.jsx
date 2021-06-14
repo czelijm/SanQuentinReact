@@ -23,7 +23,7 @@ const BandContainer = () => {
 
     return(
         <BandComponent>
-            <h2>Band Menbers</h2>
+            {/* <h2>Band Menbers</h2> */}
             <BandOverview band={band}/>
         </BandComponent>
 )}
