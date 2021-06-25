@@ -10,10 +10,21 @@ const BandMemberBio = () => {
 
     console.log('choosenBandMember');
     console.log(bandMember);
-    
     return(
         <BandMemberBioStyled>
-            <p>Some BIO</p>
+            {
+                bandMember?
+                    
+                    <div>
+                        {bandMember.descriptionArray.map((d,index)=><p key={index}>{d}</p>)}
+                        {bandMember.innerImage? <img src={bandMember.innerImage} alt=''/>:<div></div>}
+                    </div>
+                    :
+                    <div>
+
+                    </div>
+                
+            }
         </BandMemberBioStyled>
     )
 }

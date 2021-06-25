@@ -14,10 +14,9 @@ const BandItem = ({bandMember}) => {
     return(
         <BandOverviewItemComponent>
             <BandTitle>{title}</BandTitle>
-            {/* {image?<BandImage src={image} onClick={setBandMember(bandMember)}/>:<div></div>} */}
             {image?<BandImage src={image} onClick={()=>setBandMember(bandMember)}/>:<div></div>}
-            {descriptionArray.map((d,index)=><p key={index}>{d}</p>)}
-            {innerImage?<BandInnerImage src={innerImage}/>:<div></div>}
+            {/* {descriptionArray.map((d,index)=><p key={index}>{d}</p>)}
+            {innerImage?<BandInnerImage src={innerImage}/>:<div></div>} */}
         </BandOverviewItemComponent>
     )
 }
