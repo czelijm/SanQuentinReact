@@ -5,6 +5,8 @@ import SpinnerAbsolute from '../spinner/spinner.component';
 
 import {BandComponent} from './band-container.styles';
 import BandOverview from '../band-overview/band-overview.component';
+import BandMemberBio from '../band-member-bio/band-member-bio.component';
+
 import { getAllBandMembersDataFromResponse,  prepareBandMembersArray } from '../../queries/band-members/band-members.process-data';
 
 const BandContainer = () => {
@@ -25,6 +27,8 @@ const BandContainer = () => {
         <BandComponent>
             {/* <h2>Band Menbers</h2> */}
             <BandOverview band={band}/>
+            <BandMemberBio/>
+            
         </BandComponent>
 )}
 

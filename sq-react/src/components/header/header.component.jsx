@@ -1,13 +1,13 @@
 import React from 'react';
 //import {HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from './header.styles';
-import {LogoStyled, NavStyled, NavbarStyled, NavDropdownStyled, NavDropdownItemStyled, HeaderContainer,HiddenLogo,MobileLogoContainer} from './header.styles';
+import {LogoStyled, NavStyled, NavbarStyled, NavDropdownStyled, NavDropdownItemStyled, HeaderContainer} from './header.styles';
 
 // import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 
-import { ReactComponent as Logo  } from '../../assets/logo.svg';
+// import { ReactComponent as Logo  } from '../../assets/logo.svg';
 
 import 'bootstrap/dist/css/bootstrap.min.css';  
-import { alignPropType } from 'react-bootstrap/esm/DropdownMenu';
+// import { alignPropType } from 'react-bootstrap/esm/DropdownMenu';
 
 // const HeaderComponentTest = () => (
 //     <HeaderContainer>
