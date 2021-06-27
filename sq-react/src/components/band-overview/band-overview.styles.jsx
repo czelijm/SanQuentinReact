@@ -27,3 +27,10 @@ export const BandOverviewComponent = styled.div`
         /* margin-bottom: 20px; */
     }
 ` 
+
+
+export const MobileImage = styled.img`
+    display:block;
+    width:100%;
+    /* height:250px; */
+`;
