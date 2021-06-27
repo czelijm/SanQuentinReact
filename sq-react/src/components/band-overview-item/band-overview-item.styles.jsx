@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const BandOverviewItemComponent = styled.div``;
+export const BandOverviewItemComponent = styled.div`
+    
+`;
 
 export const BandTitle = styled.h2``;
 

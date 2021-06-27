@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const BandOverviewComponent = styled.div`
     /* width:35%; */
-    justify-content: center;
+    /* justify-content: center;
+    justify-self:center;
+     */
     display:grid;
     /* grid-auto-columns: 60px; */
     /* grid-column:auto; */
-
+    text-align:center;
     grid-template-columns: repeat(4, 1fr);
     /* grid-auto-rows: minmax(50px, auto); */
     /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
