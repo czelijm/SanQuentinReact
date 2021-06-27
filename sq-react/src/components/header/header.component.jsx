@@ -37,7 +37,7 @@ const Header = () => (
                         <NavStyled.Link href="/news">Newsy</NavStyled.Link>
                         <NavStyled.Link href="/gigs">Koncerty</NavStyled.Link>
                         {/* <NavStyled.Link href="/band">Zespół</NavStyled.Link> */}
-                        <NavDropdownStyled style={{color:'red'}} title="San Quentin" id="basic-nav-dropdown">
+                        <NavDropdownStyled style={{color:'red'}} title="SQInfo" id="basic-nav-dropdown">
                             <NavDropdownItemStyled href="/band">Zespół </NavDropdownItemStyled>
                             <NavDropdownItemStyled href="#action/3.2">Galeria</NavDropdownItemStyled>
                             <NavDropdownItemStyled href="#action/3.2">Video</NavDropdownItemStyled>
