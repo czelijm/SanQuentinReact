@@ -17,7 +17,7 @@ export const BandMemberDescription = styled.p`
 `;
 export const BandMemberImage = styled.img`
     width:100%;
-    border-radius:1%;
+    border-radius:3px;
 `;
 
 export const DescriptionDiv = styled.div`

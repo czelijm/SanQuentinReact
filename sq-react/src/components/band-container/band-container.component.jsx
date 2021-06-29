@@ -32,7 +32,7 @@ const BandContainer = () => {
     return(
         <BandComponent>
             {/* <h2>Band Menbers</h2> */}
-            {!isMobile && !isClicked && <ChooseYourMemberMessage>Wybierz czonka SQ i kliknij!!!</ChooseYourMemberMessage>}
+            {!isMobile && !isClicked && <ChooseYourMemberMessage>Wybierz czonka SQ i klikaj!!!</ChooseYourMemberMessage>}
             <BandOverview band={band}/>
             {!isMobile && <BandMemberBio/>}
             
