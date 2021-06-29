@@ -1,11 +1,12 @@
 import React from 'react'
+import {Carousel} from 'react-bootstrap'
+
 import BandItem from '../band-overview-item/band-overview-item.component';
 
 import {useWindowSize} from '../../hooks/useWindowSize/useWindowSize'
 
-import {BandOverviewComponent,MobileImage} from './band-overview.styles'
+import {BandOverviewComponent,MobileImage,MobileTitle,MobileCaptionDiv,MobileDescription} from './band-overview.styles'
 
-import {Carousel} from 'react-bootstrap'
 
 
 const BandOverview = ({band}) => {
@@ -28,11 +29,17 @@ const BandOverview = ({band}) => {
                             src={m.innerImage}
                             alt="Band Memeber"
                         />
-                        {/* <Carousel.Caption> */}
-                        <h3>{m.title}</h3>
-                        <p>{m.descriptionArray}</p>
                         <br/>
-                        {/* </Carousel.Caption> */}
+                        <br/>
+                        <br/>
+                        <br/>
+                        <Carousel.Caption>
+                            <MobileCaptionDiv>
+                                <MobileTitle>{m.title}</MobileTitle>
+                                <MobileDescription>{m.descriptionArray}</MobileDescription>
+                            </MobileCaptionDiv>
+                            <br/>
+                        </Carousel.Caption>
                     </Carousel.Item>
                 )}
                 </Carousel>

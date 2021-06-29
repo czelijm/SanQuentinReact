@@ -2,27 +2,35 @@ import React,{useContext} from 'react';
 
 import {BandContext} from '../../providers/band/band.provider';
 
-import {BandMemberBioStyled} from './band-member-bio.styles';
+import {BandMemberBioStyled, ImageCol, InfoCol, BandMemberTitle,BioRow,BandMemberImage,BandMemberDescription,DescriptionDiv} from './band-member-bio.styles';
 
 const BandMemberBio = () => {
     
-    const {bandMember} = useContext(BandContext); //readed here; setted in band-member-item;
+    const {bandMember,isClicked} = useContext(BandContext); //readed here; setted in band-member-item;
 
     console.log('choosenBandMember');
     console.log(bandMember);
+    console.log(isClicked);
     return(
         <BandMemberBioStyled>
             {
-                bandMember?
+                bandMember &&//?
                     
                     <div>
-                        {bandMember.descriptionArray.map((d,index)=><p key={index}>{d}</p>)}
-                        {bandMember.innerImage? <img src={bandMember.innerImage} alt=''/>:<div></div>}
+                        <BioRow>
+                            <ImageCol xs={12}  lg={{ span: 6, offset: 0 }}>
+                                {bandMember.innerImage && <BandMemberImage src={bandMember.innerImage} alt=''/>}
+                            </ImageCol>
+                            <InfoCol xs={12}  lg={{ span: 6, offset: 0 }}>
+                                <BandMemberTitle>{bandMember.title}</BandMemberTitle>
+                                <br/>
+                                <DescriptionDiv>
+                                    {bandMember.descriptionArray.map((d,index)=><BandMemberDescription key={index}>{d}</BandMemberDescription>)}
+                                </DescriptionDiv>
+                            </InfoCol>
+                        </BioRow>
                     </div>
-                    :
-                    <div>
 
-                    </div>
                 
             }
         </BandMemberBioStyled>

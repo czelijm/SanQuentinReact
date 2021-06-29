@@ -9,12 +9,12 @@ import { BandOverviewItemComponent, BandImage, BandInnerImage, BandTitle } from 
 const BandItem = ({bandMember}) => { 
     
     const {title,image,innerImage,descriptionArray} = bandMember;
-    const {setBandMember} = useContext(BandContext);
+    const {setBandMember,setIsClicked} = useContext(BandContext);
     
     return(
         <BandOverviewItemComponent>
             {/* <BandTitle>{title}</BandTitle> */}
-            {image?<BandImage src={image} onClick={()=>setBandMember(bandMember)}/>:<div></div>}
+            {image?<BandImage src={image} onClick={()=>{setBandMember(bandMember);setIsClicked();}}/>:<div></div>}
             {/* {descriptionArray.map((d,index)=><p key={index}>{d}</p>)}
             {innerImage?<BandInnerImage src={innerImage}/>:<div></div>} */}
         </BandOverviewItemComponent>
