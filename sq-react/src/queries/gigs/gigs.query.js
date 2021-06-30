@@ -19,15 +19,14 @@ export const GET_ALL_GIGS = gql`{
 }
 `
 
-// export const GET_NEWS_BY_ID = //(newsId) => (
-//     gql`
-//         query Post($id: ID!)
-//         {
-//             post(id: $id) {
-//                 id
-//                 title
-//                 content
-//             }
-//         }
-//     `
-// // )
+export const GET_GIG_BY_ID =
+    gql`
+        query Post($id: ID!)
+        {
+            post(id: $id) {
+                id
+                title
+                content
+            }
+        }
+    `

@@ -19,11 +19,15 @@ const GigsContainer = () =>{
     console.log(gigs);
 
     return(
-        <GigsContainerStyled>
-            Gigs HERE
-            <GigsOverview gigs={gigs}/>
-            {/* {data} */}
-        </GigsContainerStyled>
+        <div>
+            <h2>Koncerty:</h2>
+            <br/>
+            <GigsContainerStyled>
+                {/* Gigs HERE */}
+                <GigsOverview gigs={gigs}/>
+                {/* {data} */}
+            </GigsContainerStyled>
+        </div>
     )
 }
 

@@ -15,10 +15,14 @@ export const ButtonCustom = styled.button`
     height:auto;
 
     &:hover {
-      background-color: #121317;
+      /* background-color: #121317;
       text-decoration:none;
       color: #da1b2b;
-      border-color:#da1b2b;
+      border-color:#da1b2b; */
+      background-color: #F4A4AB;
+      text-decoration:none;
+      color: #121317;
+      border-color:#121317;
     }
 
     @media only screen and (max-width: 991px){

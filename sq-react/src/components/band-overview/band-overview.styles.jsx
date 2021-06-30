@@ -37,10 +37,10 @@ export const MobileImage = styled.img`
 
 export const MobileTitle = styled.h2`
     color: black;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-fill-color: red; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    /* font-size:1.75rem; */
+    font-size:2.5rem;
         
     /* height:250px; */
 `;
@@ -54,8 +54,9 @@ export const MobileDescription = styled.p`
 `;
 
 export const MobileCaptionDiv = styled.div`
-    background-color:rgba(218, 27, 43, 0.5);
-    /* background-color:rgba(242, 253, 255, 0.5); */
+    /* background-color:rgba(218, 27, 43, 0.5); */
+    /* background-color:rgba(242, 253, 255, 0.2); */
+    background-color:rgba(87, 97, 117, 0.2);
     padding:1%;
     border-radius:1%;
     /* opacity:0.7; */
