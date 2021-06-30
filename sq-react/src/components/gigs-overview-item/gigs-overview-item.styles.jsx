@@ -5,6 +5,7 @@ import Button from '../button/button.component';
 export const GigsOverviewItemComponent = styled.div`
     background-color:#2b303a;
     border-radius:4px;
+
 `;
 
 export const GigTitle = styled.h2`
