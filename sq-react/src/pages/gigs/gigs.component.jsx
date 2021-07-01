@@ -10,7 +10,7 @@ const GigsComponent = ({match}) =>(
 
     <div className='gigs'>
         <Route exact path={`${match.path}`} component={GigsContainer}></Route>
-        <Route path={`${match.path}/:gigId`} render={GigsItemDetails}></Route>
+        <Route path={`${match.path}/:gigId`} render={()=><GigsItemDetails/>}></Route>
     </div>
 )
 

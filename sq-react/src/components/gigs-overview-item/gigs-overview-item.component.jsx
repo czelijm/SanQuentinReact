@@ -27,7 +27,7 @@ const GigItem = ({gig:{id,title,image,descriptionArray}}) => {
             <Col xs={12} lg={{ span: 2, offset: 0 }}>
                 <GigTitle>{title}</GigTitle>
             </Col>
-                {descriptionArray.slice(0,-2).map((d,index)=>
+                {descriptionArray.slice(0,-1).map((d,index)=>
                     <Col  key={index} xs={{ span: 4, offset: 0 }} lg={{ span: 2, offset: 0 }}>
                         <GigDescriptionDiv>
                             <GigDescriptionElement>{d}</GigDescriptionElement>
