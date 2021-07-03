@@ -2,13 +2,14 @@ import React, {useContext} from 'react'
 
 import {BandContext} from '../../providers/band/band.provider';
 
-import { BandOverviewItemComponent, BandImage, BandInnerImage, BandTitle } from './band-overview-item.styles';
+import { BandOverviewItemComponent, BandImage } from './band-overview-item.styles';
 
 
 // const BandItem = ({bandMember:{title,image,innerImage,descriptionArray}}) => { 
 const BandItem = ({bandMember}) => { 
     
-    const {title,image,innerImage,descriptionArray} = bandMember;
+    // const {title,image,innerImage,descriptionArray} = bandMember;
+    const {image} = bandMember;
     const {setBandMember,setIsClicked} = useContext(BandContext);
     
     return(

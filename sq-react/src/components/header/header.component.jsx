@@ -40,7 +40,7 @@ const Header = () => (
                         <NavDropdownStyled style={{color:'red'}} title="SQInfo" id="basic-nav-dropdown">
                             <NavDropdownItemStyled href="/band">Zespół </NavDropdownItemStyled>
                             <NavDropdownItemStyled href="#action/3.2">Galeria</NavDropdownItemStyled>
-                            <NavDropdownItemStyled href="#action/3.2">Video</NavDropdownItemStyled>
+                            <NavDropdownItemStyled href="/video">Video</NavDropdownItemStyled>
                             <NavDropdownItemStyled href="#action/3.2">Dyskografia</NavDropdownItemStyled>
                             {/* <NavDropdownItemStyled href="#action/3.2">Dyskografia</NavDropdownItemStyled> */}
                             {/* <NavDropdownItemStyled href="#action/3.3">Something</NavDropdownItemStyled> */}
