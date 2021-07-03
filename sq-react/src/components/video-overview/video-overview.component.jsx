@@ -30,9 +30,8 @@ const VideoOverviewComponent = () => {
             
             try {
                 const res = await ytApi.get('/users');
-
                 setVideos(res.data);
-                setError(null);
+                if(error) setError(null);
             } catch (er) {
                 setError(er);
             } finally {
@@ -43,10 +42,11 @@ const VideoOverviewComponent = () => {
 
         fetchData();
         
-
     },[]);
 
     console.log(videos);
+    console.log(process.env);
+
     
     if(isLoading) return <SpinnerAbsolute/>;
     if(error) return <div>Error occured :(</div>;
