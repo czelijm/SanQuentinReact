@@ -1,11 +1,12 @@
 import React, {useEffect,useState} from 'react';
-import axios from 'axios'
+// import axios from 'axios'
 
 import SpinnerAbsolute from '../spinner/spinner.component'
 
-import ytApi from '../../api/youtube/youtubeApi'
+import {prepareUrlAndGetApi} from '../../api/youtube/youtubeApi.base'
 
 import {VideoOverviewCoponentStyled} from './video-overview.styles'
+import { getVideosIdFromResponse } from '../../api/youtube/youtubeApi.process-data';
 
 const VideoOverviewComponent = () => { 
 
@@ -22,15 +23,18 @@ const VideoOverviewComponent = () => {
         // })
         // console.log("Api start");
         async function fetchData() {
-            
-            // console.log("Api start");
-
-            
-            // console.log("Api stop");
-            
+            const options = {
+                part: 'snippet',
+                playlistId:process.env.REACT_APP_YT_CHANNELS_MAIN_PLAYLIST_ID,
+                key: process.env.REACT_APP_YT_API_KEY
+            }
             try {
-                const res = await ytApi.get('/users');
-                setVideos(res.data);
+                // const res = await ytApi.get('/users');
+                // setVideos(res.data);
+                const api = prepareUrlAndGetApi(`https://youtube.googleapis.com/youtube/v3`,`playlistItems`,options);
+                const res = await api.get();
+                // console.log(getVideosIdFromResponse(res));
+                setVideos(getVideosIdFromResponse(res));
                 if(error) setError(null);
             } catch (er) {
                 setError(er);
@@ -53,7 +57,7 @@ const VideoOverviewComponent = () => {
 
     return(
         <VideoOverviewCoponentStyled>
-            Some Videos 
+            {videos && videos.map(v=><p key={v}>{v}</p>)}
         </VideoOverviewCoponentStyled>
     )
 }
