@@ -14,13 +14,30 @@ export const getVideoIdFromItem = (item) => {
     return item.snippet.resourceId.videoId;
 }
 
+export const getVideoPropsFromItem = (item) => {
+    return {
+        id:item.snippet.resourceId.videoId,
+        description: item.snippet.description,
+        thumbnail:item.snippet.thumbnails.maxres.url
+    };
+}
+
 export const getVideosIdFromItems = (items) => {
     return items.map((item)=> getVideoIdFromItem(item));
+};
+
+export const getVideosPropsFromItems = (items) => {
+    return items.map((item)=> getVideoPropsFromItem(item));
 };
 
 export const getVideosIdFromResponse = (res) => {
     return getVideosIdFromItems(getItemsFromResponse(res));
 };
+
+export const getVideosPropsFromResponse = (res) => {
+    return getVideosPropsFromItems(getItemsFromResponse(res));
+};
+
 
 
 

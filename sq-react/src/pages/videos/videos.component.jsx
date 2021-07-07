@@ -7,6 +7,7 @@ const VideoComponent = () => {
 
     return(
         <div>
+            <h2>Video</h2>
             <VideoOverviewComponent/>
         </div>
     )

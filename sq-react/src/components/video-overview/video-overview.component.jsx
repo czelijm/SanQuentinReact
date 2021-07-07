@@ -2,11 +2,14 @@ import React, {useEffect,useState} from 'react';
 // import axios from 'axios'
 
 import SpinnerAbsolute from '../spinner/spinner.component'
+import VideoOverviewItem from '../video-overview-item/video-overview-item.component';
 
 import {prepareUrlAndGetApi} from '../../api/youtube/youtubeApi.base'
+import { getItemsFromResponse, getVideoPropsFromItem, getVideosIdFromResponse, getVideosPropsFromItems, getVideosPropsFromResponse } from '../../api/youtube/youtubeApi.process-data';
+
 
 import {VideoOverviewCoponentStyled} from './video-overview.styles'
-import { getVideosIdFromResponse } from '../../api/youtube/youtubeApi.process-data';
+
 
 const VideoOverviewComponent = () => { 
 
@@ -33,7 +36,9 @@ const VideoOverviewComponent = () => {
                 // setVideos(res.data);
                 const api = prepareUrlAndGetApi(`https://youtube.googleapis.com/youtube/v3`,`playlistItems`,options);
                 const res = await api.get();
-                // console.log(getVideosIdFromResponse(res));
+                console.log(res);
+                console.log(getVideosPropsFromResponse(res));
+                
                 setVideos(getVideosIdFromResponse(res));
                 if(error) setError(null);
             } catch (er) {
@@ -49,7 +54,7 @@ const VideoOverviewComponent = () => {
     },[]);
 
     console.log(videos);
-    console.log(process.env);
+    // console.log(process.env);
 
     
     if(isLoading) return <SpinnerAbsolute/>;
@@ -57,12 +62,17 @@ const VideoOverviewComponent = () => {
 
     return(
         <VideoOverviewCoponentStyled>
-            {videos && videos.map(v=><p key={v}>{v}</p>)}
+            {   videos && videos.map(v=>
+                    <VideoOverviewItem key={v} id={v} width="420" height="315"/>
+                )
+            }
         </VideoOverviewCoponentStyled>
     )
 }
 
 export default VideoOverviewComponent;
+
+//<iframe title={v} width="420" height="315" src={`https://www.youtube.com/embed/${v}`}></iframe>
 
 //2 ways
 // //1. 
