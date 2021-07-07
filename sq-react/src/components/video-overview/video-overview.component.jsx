@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 // import axios from 'axios'
 
-import SpinnerAbsolute from '../spinner/spinner.component'
+import SpinnerAbsolute from '../spinner/spinner.component';
 import VideoOverviewItem from '../video-overview-item/video-overview-item.component';
 
 import {prepareUrlAndGetApi} from '../../api/youtube/youtubeApi.base'
@@ -61,9 +61,11 @@ const VideoOverviewComponent = () => {
     if(error) return <div>Error occured :(</div>;
 
     return(
+
         <VideoOverviewCoponentStyled>
-            {   videos && videos.map(v=>
-                    <VideoOverviewItem key={v} id={v} width="420" height="315"/>
+            {/* { displayValue==='none' && <SpinnerAbsolute/> } */}
+            {videos && videos.map(v=>
+                <VideoOverviewItem key={v} id={v} width="420" height="315"/>
                 )
             }
         </VideoOverviewCoponentStyled>
@@ -73,6 +75,9 @@ const VideoOverviewComponent = () => {
 export default VideoOverviewComponent;
 
 //<iframe title={v} width="420" height="315" src={`https://www.youtube.com/embed/${v}`}></iframe>
+//<VideoOverviewItem key={v} id={v} width="420" height="315"/>
+
+//    {/* <IFrame title={v} width="420" height="315" src={`https://www.youtube.com/embed/${v}`} displayValue={displayValue} onLoad={()=> setDisplayValue('block')}></IFrame> */}
 
 //2 ways
 // //1. 
