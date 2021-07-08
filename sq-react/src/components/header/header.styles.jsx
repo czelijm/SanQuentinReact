@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 import {Link} from 'react-router-dom';
-import { ReactComponent as Logo  } from '../../assets/SQ_WHITE.svg'; 
+import { ReactComponent as Logo  } from '../../assets/SQ_RED.svg'; 
 import { ReactComponent as LogoHidden  } from '../../assets/logo.svg'; 
 
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
