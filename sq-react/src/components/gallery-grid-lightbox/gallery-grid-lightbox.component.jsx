@@ -7,6 +7,7 @@ import GalleryImage from '../gallery-item/gallery-item.component';
 import GalleryButton from '../gallery-button/gallery-button.component';
 
 import {GalleryContainer,LightboxStyled,ImageOverlay} from './gallery-grid-lightbox.styles';
+import GalleryLightboxHeader from '../gallery-header/gallery-header.component';
 
 const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
     const [currentImageIndex, setCurrentIndex] = useState(0);
@@ -48,6 +49,8 @@ const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
         return columns;
     };
 
+    console.log(images);
+
     return (
         <GalleryContainer>
             {clientSide && (
@@ -68,22 +71,22 @@ const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
                     onClose={closeLightbox}
                     onNext={gotoNext}
                     onPrev={gotoPrevious}
-                    // renderHeader={() => (
-                    //     <LightboxHeader
-                    //         currentIndex={currentImageIndex}
-                    //         galleryTitle={galleryTitle}
-                    //         images={images}
-                    //         onClose={this.closeLightbox}
-                    //     />
-                    // )}
-                    renderImageOverlay={() => (
-                        <ImageOverlay>
-                            <p>Create your own UI</p>
-                            <FiPrinter size="3em" />
-                            <FiShare size="3em" />
-                            <FiHeart size="3em" />
-                        </ImageOverlay>
+                    renderHeader={() => (
+                        <GalleryLightboxHeader
+                            currentIndex={currentImageIndex}
+                            galleryTitle={""}
+                            images={images}
+                            onClose={closeLightbox}
+                        />
                     )}
+                    // renderImageOverlay={() => (
+                    //     <ImageOverlay>
+                    //         <p>Create your own UI</p>
+                    //         <FiPrinter size="3em" />
+                    //         <FiShare size="3em" />
+                    //         <FiHeart size="3em" />
+                    //     </ImageOverlay>
+                    // )}
                     renderNextButton={({ canNext }) => (
                         <GalleryButton
                             disabled={!canNext}
@@ -110,4 +113,3 @@ export default GalleryGridLightbox;
 //TO DO
 //ADD Header in LightBox
 //check required props for image object
- 

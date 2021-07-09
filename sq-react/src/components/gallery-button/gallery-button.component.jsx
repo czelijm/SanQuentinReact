@@ -21,8 +21,8 @@ const GalleryButton = ({ disabled, onClick, position }) => {
                     }}
                 >
                     <Button onClick={onClick} position={position} type="button">
-                        {position === 'left' && <IoIosArrowBack />}
-                        {position === 'right' && <IoIosArrowForward />}
+                        {position === 'left' && <IoIosArrowBack style={{ color: "red"}}/>}
+                        {position === 'right' && <IoIosArrowForward style={{ color: "red"}} />}
                     </Button>
                 </animated.div>
             )

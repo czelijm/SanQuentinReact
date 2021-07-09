@@ -35,7 +35,7 @@ const GalleryOverview = () => {
 
     return ( 
         <GalleryOverviewStyled>
-            <GalleryGridLightbox images={images}/>
+            <GalleryGridLightbox images={images} imageMasonryDirection="column"/>
         </GalleryOverviewStyled>
     )
 }
