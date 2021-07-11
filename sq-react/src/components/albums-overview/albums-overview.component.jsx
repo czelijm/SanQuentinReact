@@ -17,13 +17,11 @@ const AlbumsOverview = () => {
     const albums = getAlbumsFromResponse(data);
 
     console.log(albums);
-    // console.log(getJsonAlbumFormData(albums[0]));
     
-
 
     return(
         <AlbumsOverviewComponentStyled>
-            {albums.map(a=><AlbumItem album={a}/>)}
+            {albums.map(a=><AlbumItem key={a.id} album={a}/>)}
         </AlbumsOverviewComponentStyled>
     )
 }

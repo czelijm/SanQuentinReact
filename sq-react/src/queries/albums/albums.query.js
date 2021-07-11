@@ -9,7 +9,8 @@ export const GET_ALL_ALBUMS = gql`{
                 content
                 featuredImage {
                     node {
-                        id
+                        id,
+                        sourceUrl
                     }
                 }
             }

@@ -1,14 +1,15 @@
 import React from 'react';
 
-import {AlbumItemComponentStyled} from './album-item.styles';
+import {AlbumItemComponentStyled,Image, Title} from './album-item.styles';
 
 const AlbumItem = ({album}) => {
 
-    const {id} = album;
+    const {id, title,image} = album;
 
     return(
         <AlbumItemComponentStyled>
-            {id}
+            <Image src={image}/>
+            <Title>title</Title>
         </AlbumItemComponentStyled>
     );
 }
