@@ -10,6 +10,7 @@ import BandComponent from './pages/band/band.component';
 import ContactComponent from './pages/contact/contact.component';
 import VideoComponent from './pages/videos/videos.component';
 import GalleryComponent from './pages/gallery/gallery.component';
+import AlbumsComponent from './pages/albums/albums.component';
 
 import {GlobalStyle} from './global.styles'
 
@@ -27,6 +28,7 @@ function App() {
       <Route path={'/contact'} component={ContactComponent} />
       <Route path={'/video'} component={VideoComponent} />
       <Route path={'/gallery'} component={GalleryComponent} />
+      <Route path={'/albums'} component={AlbumsComponent} />
     </div>
   );
 }
