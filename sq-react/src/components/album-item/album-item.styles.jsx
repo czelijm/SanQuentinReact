@@ -53,9 +53,32 @@ export const ButtonDiv = styled.div`
 export const Anchor = styled.a`
 `;
 
-export const DetailsButton = styled(Button)`
-    /* width:10%; */  
+export const DetailsButton = styled.button`
+    /* width:10%; */ 
+    background-color: #da1b2b;
+    padding:4px 15px;
+    border-color:#121317;
+    border-style:solid;
+    border-radius:2px;
+    border-width:1px;
+    font-size:1.25rem;
+    color:#f2fdff;
+    width:75%;
+    height:auto;
+    text-align:center;
+
+    &:hover {
+      /* background-color: #121317;
+      text-decoration:none;
+      color: #da1b2b;
+      border-color:#da1b2b; */
+      background-color: #F4A4AB;
+      text-decoration:none;
+      color: #121317;
+      border-color:#121317;
+    }
     display:flex;
     align-self: center;
-    width:100% !important;
+    justify-content: center;
+    /* width:100% !important; */
 `;

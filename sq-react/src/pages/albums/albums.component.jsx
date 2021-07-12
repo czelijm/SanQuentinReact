@@ -9,7 +9,8 @@ const AlbumsComponent = ({match}) => {
     return (
         <div>
             <Route exact path={`${match.path}`} component={AlbumsOverview}></Route>
-            <Route path={`${match.path}/:albumId`} render={()=><AlbumItemDetails/>}></Route>
+            {/* <Route path={`${match.path}/:albumId`} render={()=><AlbumItemDetails/>}></Route> */}
+            <Route path={`${match.path}/:albumId`} component={AlbumItemDetails}></Route>
             {/* <AlbumsOverview/> */}
         </div>
     )

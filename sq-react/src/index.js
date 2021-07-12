@@ -11,6 +11,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 import BandProvider from './providers/band/band.provider';
+import AlbumProvider from './providers/album/album.provider';
 
 const httpLink = new HttpLink(
   {
@@ -28,15 +29,17 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-  <BandProvider>
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
-      </BrowserRouter>
-    </ApolloProvider>
-  </BandProvider>
+  <AlbumProvider>
+    <BandProvider>
+      <ApolloProvider client={client}>
+        <BrowserRouter>
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+        </BrowserRouter>
+      </ApolloProvider>
+    </BandProvider>
+   </AlbumProvider>
   ,document.getElementById('root')
 );
 
