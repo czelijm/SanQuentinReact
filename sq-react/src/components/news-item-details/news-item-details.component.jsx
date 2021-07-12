@@ -4,7 +4,7 @@ import {useQuery} from '@apollo/client'
 import { GET_NEWS_BY_ID } from '../../queries/news/news.query';
 import SpinnerAbsolute from '../spinner/spinner.component';
 import { getNewsDataFromResponse } from '../../queries/news/news.process-data';
-import { NewsDetailsBackgroundPlate,NewsDetailsTitle } from './news-item-details.styles';
+import { HtmlContentDiv, NewsDetailsBackgroundPlate,NewsDetailsTitle } from './news-item-details.styles';
 
 
 const NewsItemDetails = ({match}) => {
@@ -25,7 +25,7 @@ const NewsItemDetails = ({match}) => {
         {/* {match.params.newsId} */}
         <NewsDetailsTitle>{postContent.title}</NewsDetailsTitle>
         {/* <br/> */}
-        <div dangerouslySetInnerHTML={{ __html: postContent.content }} />
+        <HtmlContentDiv dangerouslySetInnerHTML={{ __html: postContent.content }} />
     </NewsDetailsBackgroundPlate>
 )}
 

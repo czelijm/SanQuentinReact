@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import Button from '../button/button.component';
 
 export const AlbumItemComponentStyled = styled.div`
+    /* background-color:#2b303a; */
+    border-color:#da1b2b;
+    border-style:solid;
+    border-width:2px;
+
     padding:1%;
-    background-color:#2b303a;
     display:inline-flex;
     flex-direction: column;
     margin-left:3%;

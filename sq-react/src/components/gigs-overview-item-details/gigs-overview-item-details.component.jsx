@@ -7,7 +7,7 @@ import SpinnerAbsolute from '../spinner/spinner.component'
 import { GET_GIG_BY_ID } from '../../queries/gigs/gigs.query';
 import { getGigsDataFromResponse } from '../../queries/gigs/gigs.process-data';
 
-import {GigsOverviewItemDetailsComponent,DetailsTitle} from './gigs-overview-item-details.styles';
+import {GigsOverviewItemDetailsComponent,DetailsTitle, HtmlContentDiv} from './gigs-overview-item-details.styles';
 
 
 const GigsItemDetails = () => {
@@ -26,8 +26,8 @@ const GigsItemDetails = () => {
 
     return(
         <GigsOverviewItemDetailsComponent>
-        <DetailsTitle>{postContent.title}</DetailsTitle>
-             <div dangerouslySetInnerHTML={{ __html: postContent.content }} />
+            <DetailsTitle>{postContent.title}</DetailsTitle>
+            <HtmlContentDiv dangerouslySetInnerHTML={{ __html: postContent.content }} />
         </GigsOverviewItemDetailsComponent>
     )
 }

@@ -3,7 +3,7 @@ import {useLocation } from "react-router-dom";
 
 import {Row, Col} from 'react-bootstrap';
 
-import { GigsOverviewItemComponent,GigTitle,GigImage,GigDescriptionDiv,GigDescriptionElement,ImageDiv,DetailsButton, ButtonDiv } from './gigs-overview-item.styles';
+import { GigsOverviewItemComponent,GigTitle,GigImage,GigDescriptionDiv,GigDescriptionElement,ImageDiv,DetailsButton, ButtonDiv, ColImage, RowStyled } from './gigs-overview-item.styles';
 
 
 const GigItem = ({gig:{id,title,image,descriptionArray}}) => {
@@ -18,7 +18,7 @@ const GigItem = ({gig:{id,title,image,descriptionArray}}) => {
 
     return (
         <GigsOverviewItemComponent >
-            <Row>
+            <RowStyled>
             <Col xs={12} lg={{ span: 2, offset: 0 }}>
                 <ImageDiv>
                     {image?<GigImage src={image}/>:<div></div>}
@@ -28,18 +28,18 @@ const GigItem = ({gig:{id,title,image,descriptionArray}}) => {
                 <GigTitle>{title}</GigTitle>
             </Col>
                 {descriptionArray.slice(0,-1).map((d,index)=>
-                    <Col  key={index} xs={{ span: 4, offset: 0 }} lg={{ span: 2, offset: 0 }}>
+                    <ColImage  key={index} xs={{ span: 4, offset: 0 }} lg={{ span: 2, offset: 0 }}>
                         <GigDescriptionDiv>
                             <GigDescriptionElement>{d}</GigDescriptionElement>
                         </GigDescriptionDiv>
-                    </Col>
+                    </ColImage>
                 )}
                 <Col xs={{ span: 12, offset: 0 }} lg={{ span: 2, offset: 0 }}>
                     <ButtonDiv>
                         <DetailsButton to={`${pathname}/${id}`}>Obczaj to!</DetailsButton>
                     </ButtonDiv>
                 </Col>
-            </Row>
+            </RowStyled>
             {/* <Row>
                 <Col xs={{ span: 12, offset: 0 }} lg={{ span: 3, offset: 8 }}>
                     <DetailsButton to={`${pathname}/${id}`}>Obczaj to!</DetailsButton>
