@@ -21,6 +21,7 @@ const AlbumsOverview = () => {
 
     return(
         <AlbumsOverviewComponentStyled>
+            <h2 style={{textAlign:"left"}}>Dyskografia</h2>
             {albums.map(a=><AlbumItem key={a.id} album={a}/>)}
         </AlbumsOverviewComponentStyled>
     )
