@@ -22,10 +22,16 @@ export const prepareContact = (contact) =>{
 
     //convert to array
     const descriptionArray = [...mockHtml.getElementsByTagName('p')].map(p=>p.innerText);
+    const socialMediaPhotoArray = [...mockHtml.getElementsByTagName('img')].slice(1).map(i=>i.src);
+    const socialMediaLinkArray = [...mockHtml.getElementsByTagName('a')].map(a=>a.innerHTML);
+
+
     return {
         ...contact,
         image,
-        descriptionArray
+        descriptionArray,
+        socialMediaPhotoArray,
+        socialMediaLinkArray
     }
 }
 

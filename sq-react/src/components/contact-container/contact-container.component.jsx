@@ -16,7 +16,7 @@ const ContactContainer = () => {
     
     const contacts = prepareContactsArray(getAllContactsDataFromResponse(data));
     // console.log(data);
-    // console.log(contacts);
+    console.log(contacts);
 
 
     return(
