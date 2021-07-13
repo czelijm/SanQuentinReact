@@ -12,18 +12,6 @@ export const useStateWithLocalStorage = localStorageKey => {
     return [value, setValue];
 };
 
-// export const useStateWithLocalStorageForJSON = localStorageKey => {
-    
-//     const [value, setValue] = React.useState(() =>{
-//         return JSON.parse(localStorage.getItem(localStorageKey)) || undefined;
-//     });
-   
-//     React.useEffect(() => {
-//         localStorage.setItem(localStorageKey, JSON.stringify(value));
-//     }, [value]);
-   
-//     return [value, setValue];
-//   };
 
 export const useStateWithLocalStorageForJSON = localStorageKey => {
     return useStateWithStorageForJSON(localStorageKey,localStorage);
@@ -37,7 +25,15 @@ export const useStateWithSessionStorageForJSON = localStorageKey => {
 export const useStateWithStorageForJSON = (localStorageKey,storageType) => {
     
     const [value, setValue] = React.useState(() =>{
-        return JSON.parse(storageType.getItem(localStorageKey)) || undefined;
+        // let v = null;
+        try {
+          return JSON.parse(storageType.getItem(localStorageKey));
+        } catch (error) {
+          return value;
+        }
+        // console.log(v);
+
+        //return JSON.parse(storageType.getItem(localStorageKey)) || undefined;
     });
    
     React.useEffect(() => {

@@ -22,6 +22,14 @@ export const getVideoPropsFromItem = (item) => {
     };
 }
 
+export const getTrackPropsFromItem = (item) => {
+    return {
+        id:item.snippet.resourceId.videoId,
+        description: item.snippet.description,
+        thumbnail:item.snippet.thumbnails.maxres.url
+    };
+}
+
 export const getVideosIdFromItems = (items) => {
     return items.map((item)=> getVideoIdFromItem(item));
 };
