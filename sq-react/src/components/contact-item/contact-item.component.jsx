@@ -6,10 +6,11 @@ import {Anchor, ContactDescriptionElement, ContactImage, ContactsOverviewItemCom
 const ContactItem = ({contact:{title,image,descriptionArray,socialMediaPhotoArray,socialMediaLinkArray}}) => (
     <ContactsOverviewItemComponent>
         
-        <ContactTitle>{title}</ContactTitle>
+        
         <InsideDiv>
             {image?<ContactImage src={image}/>:<div></div>}
             <InfoDiv>
+                <ContactTitle>{title}</ContactTitle>
                 {descriptionArray.map((d,index)=><ContactDescriptionElement key={index}>{d}</ContactDescriptionElement>)}
                 <SocialMediaDiv>
                     {socialMediaPhotoArray.map((m,i)=><Anchor href={socialMediaLinkArray[i]} key={i}><Icon src={m}/></Anchor>)}

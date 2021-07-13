@@ -13,6 +13,7 @@ export const AlbumItemComponentStyled = styled.div`
     margin-left:3%;
     margin-top:3%;
     border-radius:5px;
+    align-items:center;
     @media only screen and (max-width: 991px){
         /* display:flex; */
         margin-left:0%;

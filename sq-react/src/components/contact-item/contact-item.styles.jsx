@@ -28,6 +28,7 @@ export const Icon = styled.img`
     padding:3px;
     width:31px;
     height:auto;
+    border-radius:100%;
 `;
 
 
