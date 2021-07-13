@@ -18,3 +18,16 @@ export const GET_ALL_ALBUMS = gql`{
     }
 }
 `
+
+// export const GET_NEWS_BY_ID = //(newsId) => (
+//     gql`
+//         query Post($id: ID!)
+//         {
+//             post(id: $id) {
+//                 id
+//                 title
+//                 content
+//             }
+//         }
+//     `
+// // )
