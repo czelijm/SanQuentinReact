@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { prepareUrlAndGetApi } from '../../api/youtube/youtubeApi.base';
 import { getVideosIdFromResponse, getVideosPropsFromResponse } from '../../api/youtube/youtubeApi.process-data';
 import SpinnerAbsolute from '../spinner/spinner.component';
-import { TrackListStyledComponent } from './track-list.styles';
+import { TrackItem, TrackListStyledComponent } from './track-list.styles';
 
 
 const TrackListComponent = ({trackListID}) => {
@@ -23,10 +23,10 @@ const TrackListComponent = ({trackListID}) => {
                     // setVideos(res.data);
                     const api = prepareUrlAndGetApi(`https://youtube.googleapis.com/youtube/v3`,`playlistItems`,options);
                     const res = await api.get();
-                    console.log(res);
-                    console.log(getVideosPropsFromResponse(res));
+                    // console.log(res);
+                    // console.log(getVideosPropsFromResponse(res));
                     
-                    setVideos(getVideosIdFromResponse(res));
+                    setVideos(getVideosPropsFromResponse(res));
                     if(error) setError(null);
                 } catch (er) {
                     setError(er);
@@ -40,7 +40,7 @@ const TrackListComponent = ({trackListID}) => {
             
         },[]);
     
-        console.log(videos);
+        // console.log(videos);
         // console.log(process.env);
     
         
@@ -49,7 +49,7 @@ const TrackListComponent = ({trackListID}) => {
     
     return (
         <TrackListStyledComponent>
-            {trackListID}
+            {videos.map((v,i)=><TrackItem key={i}>{v.description.split('-')[0]}</TrackItem>)}
         </TrackListStyledComponent>
     );
 }
