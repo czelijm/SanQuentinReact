@@ -42,6 +42,7 @@ const Header = () => (
                             <NavDropdownItemStyled href="/gallery">Galeria</NavDropdownItemStyled>
                             <NavDropdownItemStyled href="/video">Video</NavDropdownItemStyled>
                             <NavDropdownItemStyled href="/albums">Dyskografia</NavDropdownItemStyled>
+                            <NavDropdownItemStyled href="/friends">Przyjaciele i kooperacje</NavDropdownItemStyled>
                             {/* <NavDropdownItemStyled href="#action/3.2">Dyskografia</NavDropdownItemStyled> */}
                             {/* <NavDropdownItemStyled href="#action/3.3">Something</NavDropdownItemStyled> */}
                             {/* <NavDropdownStyled.Divider /> */}

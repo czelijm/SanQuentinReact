@@ -20,4 +20,8 @@ export const TrackItem = styled.h4`
     border-color:#da1b2b;
     border-width:2px; */
     padding:2px;
+    cursor: pointer;
+    :hover{
+        background-color:red;
+    }
 `;

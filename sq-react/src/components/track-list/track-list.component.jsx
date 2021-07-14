@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link, Redirect, useHistory } from 'react-router-dom';
 import { prepareUrlAndGetApi } from '../../api/youtube/youtubeApi.base';
 import { getVideosIdFromResponse, getVideosPropsFromResponse } from '../../api/youtube/youtubeApi.process-data';
 import SpinnerAbsolute from '../spinner/spinner.component';
@@ -10,6 +11,7 @@ const TrackListComponent = ({trackListID}) => {
         const [videos,setVideos] = useState([]);  
         const [isLoading,setIsLoading] = useState(true);  
         const [error,setError] = useState(null);  
+        const history = useHistory();
     
         useEffect(() =>{
             async function fetchData() {
@@ -49,7 +51,13 @@ const TrackListComponent = ({trackListID}) => {
     
     return (
         <TrackListStyledComponent>
-            {videos.map((v,i)=><TrackItem key={i}>{v.description.split('-')[0]}</TrackItem>)}
+            {videos.map((v,i)=><TrackItem onClick={() => { 
+                window.location.href = `https://www.youtube.com/watch?v=${v.id}`; 
+                return null;
+            }} 
+            key={i}>
+                {v.description.split('-')[0]}
+            </TrackItem>)}
         </TrackListStyledComponent>
     );
 }

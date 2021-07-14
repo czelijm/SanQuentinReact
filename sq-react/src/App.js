@@ -13,6 +13,7 @@ import GalleryComponent from './pages/gallery/gallery.component';
 import AlbumsComponent from './pages/albums/albums.component';
 
 import {GlobalStyle} from './global.styles'
+import FriendsComponent from './pages/firends/friends.component';
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <Route path={'/video'} component={VideoComponent} />
       <Route path={'/gallery'} component={GalleryComponent} />
       <Route path={'/albums'} component={AlbumsComponent} />
+      <Route path={'/friends'} component={FriendsComponent} />
     </div>
   );
 }
