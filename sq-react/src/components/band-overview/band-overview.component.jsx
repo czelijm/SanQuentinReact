@@ -6,6 +6,7 @@ import BandItem from '../band-overview-item/band-overview-item.component';
 import {useWindowSize} from '../../hooks/useWindowSize/useWindowSize'
 
 import {BandOverviewComponent,MobileImage,MobileTitle,MobileCaptionDiv,MobileDescription} from './band-overview.styles'
+import FriendsOverview from '../friend-overview/friend-overview.component';
 
 
 
@@ -20,7 +21,20 @@ const BandOverview = ({band}) => {
         <BandOverviewComponent>
 
             {isMobile?
-                <Carousel>
+                <FriendsOverview items={band.map(b=>{
+                    return ({id:b.id,description:b.description,title:b.title,'image':b.innerImage})
+                })}/>
+            :
+                band.map((m,index)=><BandItem key={index} bandMember={m}/>)
+            }
+        
+        </BandOverviewComponent>
+    )
+}
+
+export default BandOverview;
+
+                {/* <Carousel>
                 {
                     band.map((m, index)=>
                     <Carousel.Item key={index} interval={5000}>
@@ -42,13 +56,4 @@ const BandOverview = ({band}) => {
                         </Carousel.Caption>
                     </Carousel.Item>
                 )}
-                </Carousel>
-            :
-                band.map((m,index)=><BandItem key={index} bandMember={m}/>)
-            }
-        
-        </BandOverviewComponent>
-    )
-}
-
-export default BandOverview;
+                </Carousel> */}

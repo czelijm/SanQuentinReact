@@ -25,7 +25,8 @@ export const prepareBandMember = (member) =>{
     return {
         ...member,
         innerImage,
-        descriptionArray
+        descriptionArray,
+        description:descriptionArray.join(' ')
     }
 }
 
