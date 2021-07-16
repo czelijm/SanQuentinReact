@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import {Col, Row} from 'react-bootstrap'
 
 export const BandMemberBioStyled = styled.div`
-    margin-top:5%;
+    margin-top:2%;
+    padding:2%;
 `;
 export const BandMemberTitle = styled.h3`
     /* justify-content:center; */
@@ -16,8 +17,11 @@ export const BandMemberDescription = styled.p`
     font-size:1.75rem;
 `;
 export const BandMemberImage = styled.img`
-    width:100%;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
     border-radius:3px;
+    /* overflow:visible; */
 `;
 
 export const DescriptionDiv = styled.div`
@@ -27,9 +31,14 @@ export const DescriptionDiv = styled.div`
     padding:0% 3%;
 `;
 
-export const ImageCol = styled(Col)``;
+export const ImageCol = styled(Col)`
+    width:100%;
+    height:100%;
+`;
 export const InfoCol = styled(Col)``;
-export const BioRow = styled(Row)``;
+export const BioRow = styled(Row)`
+
+`;
 
 
 

@@ -1,11 +1,16 @@
+import { Box } from '@material-ui/core';
 import React from 'react';
+import HomePageLarge from '../../components/homepage-large/homepage-large.component';
 
-// import moduleName from './homepage.styles'
 
-const HomePage = () => (
-    <div className = 'homepage'>
-        logoSQ and other stuff
-    </div>
-)
+import { homePageStyles } from './homepage.styles'
+
+const HomePage = () => {
+
+    return(
+    <Box sx={homePageStyles} className = 'homepage'>
+        <HomePageLarge/>
+    </Box>
+)}
 
 export default HomePage;
