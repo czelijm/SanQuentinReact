@@ -15,13 +15,17 @@ const styles = {
     margin: "0 20px",
     "background-color":"#121317",
     "color":"#f2fdff",
+    // 'border-color':'#da1b2b',
+    // 'border-style':'none solid solid',
 
   },
   media: {
     height: 320
   },
   content:{
-    'border-color':'#da1b2b',
+    "background-color":"#121317",
+    "color":"#f2fdff",
+    // 'border-color':'#da1b2b',
     // 'border-style':'none solid solid',
     'border-width':'2px'
   },

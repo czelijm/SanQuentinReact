@@ -17,11 +17,25 @@ export const BandMemberDescription = styled.p`
     font-size:1.75rem;
 `;
 export const BandMemberImage = styled.img`
-    height: auto;
+    height: 620px;
+    width: 100%;
+    /* object-fit: cover; */
+    object-fit: none;
+    border-radius:3px;
+    /* -webkit-background-size: cover;
+    background-size: cover; */
+    /* overflow:visible; */
+`;
+export const BandMemberImageDiv = styled.div`
+    background-image: url(${props => props.src});
+    /* overflow:visible; */
+    height: 650px;
     width: 100%;
     object-fit: cover;
     border-radius:3px;
-    /* overflow:visible; */
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
 `;
 
 export const DescriptionDiv = styled.div`

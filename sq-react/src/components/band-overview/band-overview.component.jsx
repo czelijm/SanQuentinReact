@@ -16,9 +16,10 @@ const BandOverview = ({band}) => {
     const [,,isMobile] = useWindowSize();
 
     console.log(isMobile);
+    console.log(band);
 
     return(
-        <BandOverviewComponent>
+        <BandOverviewComponent count={band.length}>
 
             {isMobile?
                 <FriendsOverview items={band.map(b=>{
