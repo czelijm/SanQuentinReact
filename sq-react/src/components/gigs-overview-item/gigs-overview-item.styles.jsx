@@ -9,7 +9,21 @@ export const GigsOverviewItemComponent = styled.div`
     border-width:2px;
     border-radius:4px;
     margin-top:2%;
+
+    overflow: hidden;
+    position: relative;
 `;
+
+export const BackgroundImage = styled.img`
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+`;
+
+
 
 export const GigTitle = styled.h2`
     @media only screen and (min-width: 992px){

@@ -3,7 +3,7 @@ import React from 'react';
 import {useLocation} from 'react-router-dom';
 // import Button from '../button/button.component'
 
-import {NewsItemContainer,NewsTitle,NewsImage, NewsDetailsButton,NewsDetailsTitleBox, NewsDetailsRow,NewsDetailsImageBox,NewsDetailsButtonBox} from './news-item.styles'
+import {NewsItemContainer,NewsTitle,NewsImage, NewsDetailsButton,NewsDetailsTitleBox, NewsDetailsRow,NewsDetailsImageBox,NewsDetailsButtonBox, BackgroundImage} from './news-item.styles'
 
 const NewsItem = ({item:{title,image,id}}) => {
     
@@ -16,6 +16,7 @@ const NewsItem = ({item:{title,image,id}}) => {
 
     return(
     <NewsItemContainer className="justify-content-start">
+         <BackgroundImage src={"https://cdn.pixabay.com/photo/2014/05/06/14/15/metal-shelf-338882_960_720.jpg"}/>
         {/* <Card style={{ width: '18rem', backgroundColor: 'black', display: 'flex' }}>
             <Card.Img src={image} />
             <Card.Body>

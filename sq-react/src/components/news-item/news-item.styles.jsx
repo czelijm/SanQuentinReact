@@ -12,6 +12,7 @@ const ResponsiveSupport = css`
     }
 `
 
+
 export const NewsItemContainer = styled.div`
     /* background-color:#2b303a; */
     border-color:#da1b2b;
@@ -25,7 +26,20 @@ export const NewsItemContainer = styled.div`
     border-radius:4px;
     /* display:inline-flexbox; */
     /* width:100%; */
+    overflow: hidden;
+    position: relative;
+    
 `;
+
+export const BackgroundImage = styled.img`
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+`;
+
 
 export const NewsImage = styled.img`
     width: 18rem;

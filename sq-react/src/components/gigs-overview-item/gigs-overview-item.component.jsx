@@ -3,7 +3,7 @@ import {useLocation } from "react-router-dom";
 
 import {Row, Col} from 'react-bootstrap';
 
-import { GigsOverviewItemComponent,GigTitle,GigImage,GigDescriptionDiv,GigDescriptionElement,ImageDiv,DetailsButton, ButtonDiv, ColImage, RowStyled } from './gigs-overview-item.styles';
+import { GigsOverviewItemComponent,GigTitle,GigImage,GigDescriptionDiv,GigDescriptionElement,ImageDiv,DetailsButton, ButtonDiv, ColImage, RowStyled, BackgroundImage } from './gigs-overview-item.styles';
 
 
 const GigItem = ({gig:{id,title,image,descriptionArray}}) => {
@@ -18,6 +18,7 @@ const GigItem = ({gig:{id,title,image,descriptionArray}}) => {
 
     return (
         <GigsOverviewItemComponent >
+            <BackgroundImage src={"https://cdn.pixabay.com/photo/2014/05/06/14/15/metal-shelf-338882_960_720.jpg"}/>
             <RowStyled>
             <Col xs={12} lg={{ span: 2, offset: 0 }}>
                 <ImageDiv>
