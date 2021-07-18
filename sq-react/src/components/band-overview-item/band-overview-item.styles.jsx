@@ -25,7 +25,8 @@ export const styles = {
       margin: "0 20px",
       "background-color":"#121317",
       "color":"#f2fdff",
-      'border-color':'#da1b2b',
+      // 'border-color':'#da1b2b',
+      'border-color':'grey',
       'border-style':' solid solid',
       'width': '100%'
     },
