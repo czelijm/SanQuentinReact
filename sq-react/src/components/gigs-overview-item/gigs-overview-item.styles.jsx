@@ -20,7 +20,11 @@ export const BackgroundImage = styled.img`
     left: 0;
     top: 0;
     width: 100%;
-    height: auto;
+    /* height: 100%; */
+    background-size: cover;
+    @media only screen and (max-width: 991px){
+        height: 100%; 
+    }
 `;
 
 
