@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { Box, Grid, Paper, styled } from '@material-ui/core';
 import React from 'react';
+import { HomePageGlobalStyle } from '../../pages/homepage/homepage.styles';
 import { getContentFormResponse, getHtmlArrayFromData, getItemsFromRespone } from '../../queries/home/home.process-data';
 import { GET_HOME_PAGE_LARGE } from '../../queries/home/home.query';
 import  HomePageLargeItem from '../homepage-large-item/homepage-large-item.component';
@@ -25,7 +26,7 @@ const HomePageLarge = () => {
 
     return(
         <Box sx={boxStylesFlex(itemCount)}>
-            
+            <HomePageGlobalStyle/>        
             {items.map((item,index)=><Grid key={index} xs={12}><HomePageLargeItem media={item}/></Grid>)}
             {/* <Grid xs={12}><Item>1</Item></Grid>
             <Grid sx={{ 'max-width': '100%'}} xs={12}><Item>1</Item></Grid>

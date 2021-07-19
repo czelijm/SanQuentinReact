@@ -14,15 +14,19 @@ import AlbumsComponent from './pages/albums/albums.component';
 
 import {GlobalStyle} from './global.styles'
 import FriendsComponent from './pages/firends/friends.component';
+import { HomePageGlobalStyle } from './pages/homepage/homepage.styles';
 
 
 
 function App() {
+  console.log("location :" + window.location.pathname);
   return (
     <div className="App">
+      <Header/>
       <GlobalStyle/>
-      <Header />
+      {/* {window.location.pathname==="/" &&<HomePageGlobalStyle/>} */}
       <Route exact path={'/'} component={HomePage} />
+      {/* <Route exact path={'/'} render={()=><div><HomePageGlobalStyle/><HomePage/></div>} /> */}
       <Route path={'/gigs'} component={GigsComponent} />
       <Route path={'/news'} component={NewsComponent} />
       <Route path={'/band'} component={BandComponent} />

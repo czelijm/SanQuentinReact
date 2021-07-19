@@ -15,7 +15,7 @@ export const HomePageLargeItemStyled = styled(Paper)(({ theme }) => { return {
     "flex-direction": "row",
     transition: ".7s",
     "&:hover":{
-        "height":"400px",
+        // "height":"600px",
         "flex": "7",
         "z-index":"1",
         "opacity":"1",
@@ -24,11 +24,11 @@ export const HomePageLargeItemStyled = styled(Paper)(({ theme }) => { return {
 
 export const styles = {
     image:{
-        "object-fit": "none",
+        "object-fit": "cover",
         "width":"100%",
-        "height": '850px',
+        "height": '100%',
         "&:hover":{
-            "width":"600px",
+            "width":"45vw",
             // "height": '1000px',
             "flex": "7",
         }

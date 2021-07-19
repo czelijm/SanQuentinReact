@@ -20,6 +20,10 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color:#f2fdff;
     }
+    html, body, #root, .App {
+        ${'' /* height: 100vh; */}
+        ${'' /* width: 100vw; */}
+    }
 `
 
 
