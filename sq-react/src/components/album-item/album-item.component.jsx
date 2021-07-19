@@ -4,6 +4,7 @@ import { AlbumContext } from '../../providers/album/album.provider';
 import MoreSocialMediaComponent from '../more-socialmedia/more-socialmedia.component';
 
 import {AlbumItemComponentStyled,Image, Title,StreamingMediaDiv, Anchor, PlatformIcon, DetailsButton,ButtonDiv, BackgroundImage} from './album-item.styles';
+import metalShelf from '../../assets/metal-shelf.jpg';
 
 const AlbumItem = ({album}) => {
     const {pathname} =  useLocation();
@@ -18,7 +19,7 @@ const AlbumItem = ({album}) => {
 
     return(
         <AlbumItemComponentStyled>
-            <BackgroundImage src={"https://cdn.pixabay.com/photo/2014/05/06/14/15/metal-shelf-338882_960_720.jpg"}/>
+            <BackgroundImage src={metalShelf}/>
             <Image src={image}/>
             <Title>{title}</Title>
             <StreamingMediaDiv>

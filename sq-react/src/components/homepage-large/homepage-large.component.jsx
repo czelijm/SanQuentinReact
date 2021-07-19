@@ -9,6 +9,7 @@ import SpinnerAbsolute from '../spinner/spinner.component';
 import VideoPlayer from '../video-player/video-player.component';
 import { boxStyles, boxStylesFlex, gridMobileStyles } from './homepage-large.styles';
 
+
 // import moduleName from './homepage.styles'
 
 const HomePageLarge = () => {
@@ -32,6 +33,7 @@ const HomePageLarge = () => {
             {/* <Grid xs={12}><Item>1</Item></Grid>
             <Grid sx={{ 'max-width': '100%'}} xs={12}><Item>1</Item></Grid>
             <Grid sx={{ 'max-width': '100%'}} xs={12}><Item>1</Item></Grid> */}
+            
         </Box>
 )}
 

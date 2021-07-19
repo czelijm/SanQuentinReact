@@ -39,4 +39,11 @@ export const IFrame = styled.iframe`
     }
 `;
 
+export const WaitingGif = styled.img`
+    width:320px;
+    height:320px;
+    object-fit: cover;
+`;
+
+
 

@@ -12,6 +12,9 @@ export const BandImage = styled.img`
     border-color:#da1b2b;
     border-style:solid;
     border-width:2px;
+    :hover {
+      opacity:0.5;
+    }
 `;
 
 export const BandInnerImage = styled.img``;
@@ -35,7 +38,10 @@ export const styles = {
       width: 'auto',
       "background-color":"#121317",
       '-webkit-background-size': 'cover',
-      'background-size': 'cover'
+      'background-size': 'cover',
+      '&:hover':{
+        opacity:'0.5'
+      }
     },
     content:{
       "background-color":"#121317",
