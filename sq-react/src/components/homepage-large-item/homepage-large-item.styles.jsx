@@ -19,7 +19,19 @@ export const HomePageLargeItemStyled = styled(Paper)(({ theme }) => { return {
         "flex": "7",
         "z-index":"1",
         "opacity":"1",
+    },
+    "@media (max-width: 801px)": {
+        height: '100%',
+        width:"100vw !important",
+        "&:hover":{
+            // "height":"100%",
+            // "height": '1000px',
+            // "flex": "7",
+        }
+        // 'flex-direction': 'column' 
+    
     }
+    
 }});
 
 export const styles = {
@@ -31,7 +43,11 @@ export const styles = {
             "width":"45vw",
             // "height": '1000px',
             "flex": "7",
+            "@media (max-width: 801px)": {
+                "width":"100vw",
+            }
         }
+        
     },
     transform:{
         "&:hover":{

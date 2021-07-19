@@ -3,13 +3,12 @@ import React from 'react';
 import HomePageLarge from '../../components/homepage-large/homepage-large.component';
 
 
-import { HomePageGlobalStyle, homePageStyles } from './homepage.styles'
+import { homePageStyles } from './homepage.styles'
 
 const HomePage = () => {
 
     return(
     <Box sx={homePageStyles} className = 'homepage'>
-        <HomePageGlobalStyle/>
         <HomePageLarge/>
     </Box>
 )}

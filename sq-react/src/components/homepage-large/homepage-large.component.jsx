@@ -6,7 +6,7 @@ import { getContentFormResponse, getHtmlArrayFromData, getItemsFromRespone } fro
 import { GET_HOME_PAGE_LARGE } from '../../queries/home/home.query';
 import  HomePageLargeItem from '../homepage-large-item/homepage-large-item.component';
 import SpinnerAbsolute from '../spinner/spinner.component';
-import { boxStyles, boxStylesFlex } from './homepage-large.styles';
+import { boxStyles, boxStylesFlex, gridMobileStyles } from './homepage-large.styles';
 
 // import moduleName from './homepage.styles'
 
@@ -27,7 +27,7 @@ const HomePageLarge = () => {
     return(
         <Box sx={boxStylesFlex(itemCount)}>
             <HomePageGlobalStyle/>        
-            {items.map((item,index)=><Grid key={index} xs={12}><HomePageLargeItem media={item}/></Grid>)}
+            {items.map((item,index)=><Grid sx={gridMobileStyles} key={index} xs={12}><HomePageLargeItem media={item}/></Grid>)}
             {/* <Grid xs={12}><Item>1</Item></Grid>
             <Grid sx={{ 'max-width': '100%'}} xs={12}><Item>1</Item></Grid>
             <Grid sx={{ 'max-width': '100%'}} xs={12}><Item>1</Item></Grid> */}
