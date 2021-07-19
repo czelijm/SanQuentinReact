@@ -6,3 +6,12 @@ export const boxStyles = (itemCount) => ({
         // gridTemplateRows:`repeat(1, 1fr)` 
      },
 })
+
+export const boxStylesFlex = (itemCount) => ({ 
+    display: 'flex', 
+    height: '100%',
+    // "@media (min-width: 801px)": {
+    //     gridTemplateColumns: `repeat(${itemCount}, 1fr)`, // itemCount times, 1 fraction of space
+    //     // gridTemplateRows:`repeat(1, 1fr)` 
+    //  },
+})

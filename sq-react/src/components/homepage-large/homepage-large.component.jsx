@@ -3,9 +3,9 @@ import { Box, Grid, Paper, styled } from '@material-ui/core';
 import React from 'react';
 import { getContentFormResponse, getHtmlArrayFromData, getItemsFromRespone } from '../../queries/home/home.process-data';
 import { GET_HOME_PAGE_LARGE } from '../../queries/home/home.query';
-import { HomePageLargeItem } from '../homepage-large-item/homepage-large-item.component';
+import  HomePageLargeItem from '../homepage-large-item/homepage-large-item.component';
 import SpinnerAbsolute from '../spinner/spinner.component';
-import { boxStyles } from './homepage-large.styles';
+import { boxStyles, boxStylesFlex } from './homepage-large.styles';
 
 // import moduleName from './homepage.styles'
 
@@ -20,13 +20,13 @@ const HomePageLarge = () => {
     console.log(items);
 
 
-    // const itemCount =4;
+    const itemCount =items.length;
 
 
     return(
-        <Box sx={boxStyles(items.length)}>
+        <Box sx={boxStylesFlex(itemCount)}>
             
-            {items.map((item,index)=><Grid key={index} xs={12}><HomePageLargeItem>1</HomePageLargeItem></Grid>)}
+            {items.map((item,index)=><Grid key={index} xs={12}><HomePageLargeItem media={item}/></Grid>)}
             {/* <Grid xs={12}><Item>1</Item></Grid>
             <Grid sx={{ 'max-width': '100%'}} xs={12}><Item>1</Item></Grid>
             <Grid sx={{ 'max-width': '100%'}} xs={12}><Item>1</Item></Grid> */}

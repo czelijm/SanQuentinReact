@@ -8,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
         padding: 20px 60px;
         ${'' /* font-family: 'Open Sans Condensed', sans-serif; */}
         ${'' /* color: #da1b2b; */}
-        height: 100vh;
-        width: 100vw;
+        ${'' /* height: 100vh;
+        width: 100vw; */}
         
         @media screen and (max-width:800px){
         padding: 0;

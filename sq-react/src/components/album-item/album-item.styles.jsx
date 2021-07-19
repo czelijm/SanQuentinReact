@@ -25,6 +25,23 @@ export const AlbumItemComponentStyled = styled.div`
         /* padding: 3% !important; */
         /* margin-top:0%; */
     }
+
+    overflow: hidden;
+    position: relative;
+`;
+
+export const BackgroundImage = styled.img`
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index:-1;
+    @media only screen and (max-width: 991px){
+        height: 100%; 
+    }
 `;
 
 export const Image = styled.img`
@@ -38,6 +55,7 @@ export const PlatformIcon = styled.img`
     padding:5px;
     border-radius:100%;
 `;
+
 
 export const Title = styled.h2`
     display:block;
