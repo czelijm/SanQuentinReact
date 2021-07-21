@@ -50,6 +50,8 @@ const Header = () => (
                         </NavDropdownStyled>
 
                         <NavStyled.Link href="/contact">Kontakt</NavStyled.Link>
+                    
+                        <NavStyled.Link href='https://czelijm.github.io/AboutMe/'><small>website by Marek Czelij</small></NavStyled.Link>
                     </NavStyled>
                 </NavbarStyled.Collapse>
         </NavbarStyled>

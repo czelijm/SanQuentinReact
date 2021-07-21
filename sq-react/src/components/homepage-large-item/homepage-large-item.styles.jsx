@@ -59,15 +59,15 @@ export const styles = {
         // },
         'z-index':'999',
         // 'font-weight': '900',
-        'font-size': '4rem',
-        color:'red',
+        'font-size': '3.4rem',
+        color:'#f2fdff',
         position:'absolute',
         bottom:'20%',
         'left':'10%',
         "opacity":"0.7",
         // 'background-color':'black',
-        '-webkit-text-stroke-width': '1px',
-        '-webkit-text-stroke-color': 'black',
+        '-webkit-text-stroke-width': '2px',
+        '-webkit-text-stroke-color': '#121317',
         'font-family':'Cleanwork',
         // 'font-family':'Teko, sans-serif',
         // 'font-family': 'Bungee, cursive',
@@ -78,7 +78,7 @@ export const styles = {
         // "&:hover":{"opacity":"0.1",}
 
     },
-    transform:{
+    container:{
         "&:hover":{
             // transform:'scaleX(1.5)',
             // 'transform-origin':'bottom',
@@ -88,8 +88,16 @@ export const styles = {
             // "opacity":"1",
             // "animation-duration": "500ms",
             // "animation-fill-mode": "both",
-            
-        }
-    }
+            '& h2':{
+                // display:'none',
+                opacity:'0.3'
+            }
+        },
+
+    },
+    // '.container:hover .bandMemberName':{
+    //     display:'none',
+    // }
+
 }
 

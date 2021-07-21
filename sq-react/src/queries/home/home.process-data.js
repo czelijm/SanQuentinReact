@@ -3,6 +3,7 @@ export const getItemsFromRespone = (resp) =>{
 }
 
 export const getContentFormResponse = (resp) =>{
+    // console.log(resp.pageBy.content);
     return resp.pageBy.content
 }
 
@@ -11,7 +12,9 @@ export const getHtmlArrayFromData = (data) =>{
     mockHtml.innerHTML = data;
     const videos = [...mockHtml.getElementsByTagName('video')].map(v=>v.src);
     const images = [...mockHtml.getElementsByTagName('img')].map(i=>i.src);
+    const names = [...mockHtml.getElementsByTagName('p')].map(p=>p.innerText);
+    console.log(names);
 
-    return videos.map((v,i)=>({video:v,'image':images[i]}));
+    return videos.map((v,i)=>({video:v,'image':images[i],name:names[i]}));
 }
 

@@ -32,7 +32,7 @@ const HomePageLargeItem = ({media}) => {
 
 
 
-    const {image, video} = media;
+    const {image, video, name} = media;
 
     const stopMovie = (e) => {
         e.target.pause();
@@ -47,7 +47,7 @@ const HomePageLargeItem = ({media}) => {
     // console.log(media);
     
     return (
-        <HomePageLargeItemStyled>
+        <HomePageLargeItemStyled className={classes.container}>
             {/* <img className={classes.image} src={image} alt=''/> */}
             <video 
                 className={classes.image}
@@ -60,7 +60,7 @@ const HomePageLargeItem = ({media}) => {
                 loop
                 muted    
             />
-            <h2 className={classes.bandMemberName}>MICHAŁ</h2>
+            <h2 className={classes.bandMemberName}>{name}</h2>
         </HomePageLargeItemStyled>
     )
 };
