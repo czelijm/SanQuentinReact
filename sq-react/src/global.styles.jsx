@@ -1,4 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
+import Cleanwork from './assets/Cleanwork.ttf';
 
 export const GlobalStyle = createGlobalStyle`
     body{
@@ -24,6 +25,12 @@ export const GlobalStyle = createGlobalStyle`
         ${'' /* height: 100vh; */}
         ${'' /* width: 100vw; */}
     }
+
+    @font-face {
+        font-family: 'Cleanwork';
+        src: url(${Cleanwork});
+    }
+
 `
 
 

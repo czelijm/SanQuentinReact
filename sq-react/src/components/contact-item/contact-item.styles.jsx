@@ -37,6 +37,8 @@ export const ContactTitle = styled.h2``;
 
 export const ContactImage = styled.img`
     border-radius:5px;
+    /* width:100%;
+    height:auto; */
     @media only screen and (max-width: 991px){
         width:100%;
         height:auto;
