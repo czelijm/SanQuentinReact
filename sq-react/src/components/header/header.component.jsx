@@ -7,6 +7,7 @@ import {LogoStyled, NavStyled, NavbarStyled, NavDropdownStyled, NavDropdownItemS
 // import { ReactComponent as Logo  } from '../../assets/logo.svg';
 
 import 'bootstrap/dist/css/bootstrap.min.css';  
+import SocialMediaBar from '../social-media-bar/social-media-bar.component';
 // import { alignPropType } from 'react-bootstrap/esm/DropdownMenu';
 
 // const HeaderComponentTest = () => (
@@ -52,6 +53,7 @@ const Header = () => (
                         <NavStyled.Link href="/contact">Kontakt</NavStyled.Link>
                     
                         <NavStyled.Link href='https://czelijm.github.io/AboutMe/'><small>website by Marek Czelij</small></NavStyled.Link>
+                        <NavStyled.Link><SocialMediaBar/></NavStyled.Link>
                     </NavStyled>
                 </NavbarStyled.Collapse>
         </NavbarStyled>

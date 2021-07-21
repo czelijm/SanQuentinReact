@@ -31,6 +31,7 @@ export const styles = {
       // 'border-color':'#da1b2b',
       'border-color':'grey',
       'border-style':' solid solid',
+      transition: ".7s",
       'width': '100%'
     },
     media: {
@@ -46,13 +47,15 @@ export const styles = {
     content:{
       "background-color":"#121317",
       "color":"#f2fdff",
+      transition: ".7s",
       // 'border-color':'#da1b2b',
       // 'border-style':'none solid solid',
       'border-width':'2px'
     },
     title:{
       // 'color':'#da1b2b',
-      "font-weight": "bold"
+      "font-weight": "bold",
+      transition: ".7s",
     }
     
   };
