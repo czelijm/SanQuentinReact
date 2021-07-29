@@ -131,6 +131,7 @@ export const NavStyled = styled(Nav)`
     /* position: fixed; */
     /* top: 0;
     width: 100%; */
+    margin-right:60px;
 `;
 
 

@@ -8,7 +8,7 @@ import {LogoStyled, NavStyled, NavbarStyled, NavDropdownStyled, NavDropdownItemS
 
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import SocialMediaBar from '../social-media-bar/social-media-bar.component';
-import { Nav } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 // import { alignPropType } from 'react-bootstrap/esm/DropdownMenu';
 
 // const HeaderComponentTest = () => (
@@ -53,10 +53,11 @@ const Header = () => (
                         <Nav.Link href="/contact">Kontakt</Nav.Link>
                     
                     </Nav>
-                    <Nav>
+                    <NavStyled className='navHomePage'>
                         <Nav.Link><SocialMediaBar/></Nav.Link>
-                        <Nav.Link href='https://czelijm.github.io/AboutMe/'><div><small>website by Marek Czelij</small></div></Nav.Link>
-                    </Nav>
+                        <Nav.Link href='https://czelijm.github.io/AboutMe/'><p>website by Marek Czelij</p></Nav.Link>
+                    </NavStyled>
+
                 </NavbarStyled.Collapse>
         </NavbarStyled>
         

@@ -11,4 +11,8 @@ export const HomePageGlobalStyle = createGlobalStyle`
         width: 100vw;
         padding: 0 !important;
     }
+
+    .navHomePage {
+        margin-right:0px !important;
+    }
 `
