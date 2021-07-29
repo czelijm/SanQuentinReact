@@ -8,6 +8,7 @@ import {LogoStyled, NavStyled, NavbarStyled, NavDropdownStyled, NavDropdownItemS
 
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import SocialMediaBar from '../social-media-bar/social-media-bar.component';
+import { Nav } from 'react-bootstrap';
 // import { alignPropType } from 'react-bootstrap/esm/DropdownMenu';
 
 // const HeaderComponentTest = () => (
@@ -26,18 +27,18 @@ import SocialMediaBar from '../social-media-bar/social-media-bar.component';
 
 const Header = () => (
     <HeaderContainer>
-        <NavbarStyled style={{color:'white'}} variant='dark' expand="lg">
+        <NavbarStyled collapseOnSelect expand="true" style={{color:'white'}} variant='dark' expand="lg">
                 <NavbarStyled.Brand href="/"> <LogoStyled className='logo'/></NavbarStyled.Brand>
             {/* <MobileLogoContainer>
                 <NavbarStyled.Brand href="/"> <LogoStyled className='logo'/></NavbarStyled.Brand>
                 <NavbarStyled.Brand style={{padding:'0'}} href="/"> <HiddenLogo className='logo'/></NavbarStyled.Brand>
             </MobileLogoContainer> */}
-                <NavbarStyled.Toggle aria-controls="basic-navbar-nav" />
-                <NavbarStyled.Collapse  id="basic-navbar-nav">
-                    <NavStyled className="mr-auto">
-                        <NavStyled.Link href="/news">Newsy</NavStyled.Link>
-                        <NavStyled.Link href="/gigs">Koncerty</NavStyled.Link>
-                        {/* <NavStyled.Link href="/band">Zespół</NavStyled.Link> */}
+                <NavbarStyled.Toggle aria-controls="responsive-navbar-nav" />
+                <NavbarStyled.Collapse className="justify-content-between" id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="/news">Newsy</Nav.Link>
+                        <Nav.Link href="/gigs">Koncerty</Nav.Link>
+                        {/* <Nav.Link href="/band">Zespół</Nav.Link> */}
                         <NavDropdownStyled style={{color:'red'}} title="My i nasza muza" id="basic-nav-dropdown">
                             <NavDropdownItemStyled href="/band">Zespół </NavDropdownItemStyled>
                             <NavDropdownItemStyled href="/gallery">Galeria</NavDropdownItemStyled>
@@ -49,12 +50,13 @@ const Header = () => (
                             {/* <NavDropdownStyled.Divider /> */}
                             {/* <NavDropdownItemStyled href="#action/3.4">Separated link</NavDropdownItemStyled> */}
                         </NavDropdownStyled>
-
-                        <NavStyled.Link href="/contact">Kontakt</NavStyled.Link>
+                        <Nav.Link href="/contact">Kontakt</Nav.Link>
                     
-                        <NavStyled.Link href='https://czelijm.github.io/AboutMe/'><small>website by Marek Czelij</small></NavStyled.Link>
-                        <NavStyled.Link><SocialMediaBar/></NavStyled.Link>
-                    </NavStyled>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link><SocialMediaBar/></Nav.Link>
+                        <Nav.Link href='https://czelijm.github.io/AboutMe/'><div><small>website by Marek Czelij</small></div></Nav.Link>
+                    </Nav>
                 </NavbarStyled.Collapse>
         </NavbarStyled>
         

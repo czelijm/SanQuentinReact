@@ -59,6 +59,7 @@ const HomePageLargeItem = ({media}) => {
                 preload='none'
                 loop
                 muted    
+                // autoPlay={true}
             />
             <h2 className={classes.bandMemberName}>{name}</h2>
         </HomePageLargeItemStyled>

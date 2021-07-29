@@ -57,7 +57,7 @@ export const styles = {
         //     'font-family': "Cleanwork",
         //     src: `local('Cleanwork') url(${Cleanwork}) format('truetype')`
         // },
-        'z-index':'999',
+        'z-index':'0',
         // 'font-weight': '900',
         'font-size': '3.4rem',
         color:'#f2fdff',
