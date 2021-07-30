@@ -3,20 +3,20 @@ import styled from 'styled-components';
 import SpinnerAbsolute from '../spinner/spinner.component';
 
 export const VideoOverviewComponentStyled = styled.div``;
-export const SpinnerDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
-    align-items: center;
-    padding:10%;
-`;
-export const SpinnerDescription = styled.p`
-    display: flex;
-    text-align:center;
-    flex-direction: column;
-`;
+// export const SpinnerDiv = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     align-content: stretch;
+//     justify-content: center;
+//     align-items: center;
+//     padding:10%;
+// `;
+// export const SpinnerDescription = styled.p`
+//     display: flex;
+//     text-align:center;
+//     flex-direction: column;
+// `;
 
 export const Spinner = styled(SpinnerAbsolute)`
 
@@ -39,11 +39,11 @@ export const IFrame = styled.iframe`
     }
 `;
 
-export const WaitingGif = styled.img`
-    width:320px;
-    height:320px;
-    object-fit: cover;
-`;
+// export const WaitingGif = styled.img`
+//     width:320px;
+//     height:320px;
+//     object-fit: cover;
+// `;
 
 
 

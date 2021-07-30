@@ -33,7 +33,7 @@ export const MoreSocialMediaIconDivHomePage=styled.div`
         background-color: black;
         top: 90px;
         right: 120px;
-        z-index: 5;
+        z-index: 999;
     };
 
 `;

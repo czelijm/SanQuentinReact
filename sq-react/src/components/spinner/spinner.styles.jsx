@@ -29,3 +29,24 @@ export const SpinnerContainer = styled.div`
     }
   }
 `;
+
+export const SpinnerDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+    padding:10%;
+`;
+export const SpinnerDescription = styled.p`
+    display: flex;
+    text-align:center;
+    flex-direction: column;
+`;
+
+export const WaitingGif = styled.img`
+    width:70px;
+    height:70px;
+    object-fit: cover;
+`;

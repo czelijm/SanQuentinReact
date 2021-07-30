@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import {Spinner} from 'react-bootstrap';
 import waitGit from '../../assets/wait.gif';
+import { SpinnerAdjustable } from '../spinner/spinner.component';
 
-import {VideoOverviewComponentStyled,IFrame,SpinnerDiv,SpinnerDescription, WaitingGif} from './video-overview-item.styles';
+import {VideoOverviewComponentStyled,IFrame} from './video-overview-item.styles';
 
 const VideoOverviewItem = ({id,width,height}) =>{
 
@@ -10,12 +11,7 @@ const VideoOverviewItem = ({id,width,height}) =>{
 
     return (
     <VideoOverviewComponentStyled>
-        { displayValue==='none' &&
-            <SpinnerDiv>
-                {/* <Spinner animation="grow" variant="light"/> */}
-                <WaitingGif src={waitGit} alt=''/>
-                <SpinnerDescription>Fetching data from Youtube...</SpinnerDescription>
-            </SpinnerDiv>
+        { displayValue==='none' && <SpinnerAdjustable/>
         }
         {
             <IFrame width={width} height={height} src={`https://www.youtube.com/embed/${id}`} displayValue={displayValue} onLoad={()=> setDisplayValue('block')}/>

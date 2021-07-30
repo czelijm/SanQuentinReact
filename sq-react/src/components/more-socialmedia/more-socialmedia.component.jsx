@@ -32,7 +32,12 @@ export const MoreSocialMediaComponentObjectArray = ({array}) => {
                 <MoreSocialMediaIconDivHomePage>
                     {array.map(
                         (item,index)=>
-                            <Anchor key={index} href={item.url} ><PlatformIcon src={item.image} alt="" /></Anchor>
+                            <Anchor key={index} href={item.url} onClick={() => { 
+                                window.location.href = item.url; 
+                                return null;}}
+                            >
+                                <PlatformIcon src={item.image} alt="" />
+                            </Anchor>
                     )}
                 </MoreSocialMediaIconDivHomePage>}
         </MoreSocialMediaStyledComponent>
