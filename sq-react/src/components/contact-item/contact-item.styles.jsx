@@ -19,6 +19,7 @@ export const InfoDiv = styled.div`
     overflow: hidden;
     position: relative;
     padding:10px;
+    border-radius:2px;
 `;
 
 
@@ -27,6 +28,7 @@ export const SocialMediaDiv = styled.div`
     overflow: hidden;
     position: relative;
     padding:2px;
+    border-radius:2px;
 `;
 export const Anchor = styled.a`
 
@@ -46,6 +48,7 @@ export const ContactTitle = styled.h2`
     position: relative;
     padding:5px;
     margin-bottom:0;
+    border-radius:2px;
 `;
 
 export const ContactImage = styled.img`
@@ -69,4 +72,5 @@ export const ContactDescriptionElement = styled.h3`
     position: relative;
     padding:2px;
     margin-bottom:0;
+    border-radius:2px;
 `;
