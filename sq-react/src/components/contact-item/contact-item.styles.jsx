@@ -16,10 +16,17 @@ export const InsideDiv = styled.div`
     text-align:center;
 `;
 export const InfoDiv = styled.div`
-
+    overflow: hidden;
+    position: relative;
+    padding:10px;
 `;
-export const SocialMediaDiv = styled.div`
 
+
+export const SocialMediaDiv = styled.div`
+    background-color:rgba(0,0,0,0.7);
+    overflow: hidden;
+    position: relative;
+    padding:2px;
 `;
 export const Anchor = styled.a`
 
@@ -33,7 +40,13 @@ export const Icon = styled.img`
 
 
 
-export const ContactTitle = styled.h2``;
+export const ContactTitle = styled.h2`
+    background-color:rgba(0,0,0,0.7);
+    overflow: hidden;
+    position: relative;
+    padding:5px;
+    margin-bottom:0;
+`;
 
 export const ContactImage = styled.img`
     border-radius:5px;
@@ -46,6 +59,14 @@ export const ContactImage = styled.img`
     
 `;
 
-export const ContactDescriptionDiv = styled.div``;
+export const ContactDescriptionDiv = styled.div`
+    background-color:rgba(0, 0, 0, 0.7);
+`;
 
-export const ContactDescriptionElement = styled.h3``;
+export const ContactDescriptionElement = styled.h3`
+    background-color:rgba(0,0,0,0.7);
+    overflow: hidden;
+    position: relative;
+    padding:2px;
+    margin-bottom:0;
+`;

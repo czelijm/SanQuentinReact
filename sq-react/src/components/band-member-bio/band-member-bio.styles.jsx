@@ -41,6 +41,7 @@ export const BandMemberDescription = styled.p`
     text-align:left;
     font-size:1.75rem;
     border-radius:2px;
+    
 `;
 export const BandMemberImage = styled.img`
     height: 620px;
