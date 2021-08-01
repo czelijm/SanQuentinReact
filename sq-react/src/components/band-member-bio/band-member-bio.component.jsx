@@ -1,8 +1,10 @@
 import React,{useContext, useEffect, useState} from 'react';
 
 import {BandContext} from '../../providers/band/band.provider';
+import { BackgroundImage } from '../backgorund-image/background-image.styles';
 
-import {BandMemberBioStyled, ImageCol, InfoCol, BandMemberTitle,BioRow,BandMemberImage,BandMemberDescription,DescriptionDiv, BandMemberImageDiv} from './band-member-bio.styles';
+import {BandMemberBioStyled, ImageCol, InfoCol, BandMemberTitle,BioRow,BandMemberImage,BandMemberDescription,DescriptionDiv, BandMemberImageDiv, BandMemberBioDescriptionContainer} from './band-member-bio.styles';
+import metalShelf from '../../assets/metal-shelf.jpg';
 
 const BandMemberBio = () => {
     
@@ -27,7 +29,8 @@ const BandMemberBio = () => {
             {
                 bandMember &&//?
                     
-                    <div>
+                    <BandMemberBioDescriptionContainer>
+                        <BackgroundImage src={metalShelf}/>
                         <BioRow>
                             <ImageCol xs={12}  lg={{ span: 6, offset: 0 }}>
                                 {bandMember.innerImage && <BandMemberImage src={bandMember.innerImage} alt=''/>}
@@ -41,7 +44,7 @@ const BandMemberBio = () => {
                                 </DescriptionDiv>
                             </InfoCol>
                         </BioRow>
-                    </div>
+                    </BandMemberBioDescriptionContainer>
 
                 
             }

@@ -51,15 +51,15 @@ const HomePageLargeItem = ({media}) => {
             {/* <img className={classes.image} src={image} alt=''/> */}
             <video 
                 className={classes.image}
-                onMouseOver={playMovie}
-                onMouseOut={stopMovie}
+                // onMouseOver={playMovie}
+                // onMouseOut={stopMovie}
                 src={video}
                 poster={image}
                 // preload='auto'
                 preload='none'
                 loop
                 muted    
-                // autoPlay={true}
+                autoPlay={true}
             />
             <h2 className={classes.bandMemberName}>{name}</h2>
         </HomePageLargeItemStyled>
