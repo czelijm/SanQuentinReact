@@ -9,6 +9,7 @@ import { GET_GALLERY } from '../../queries/gallery/gallery.querry';
 import { getHtmlArrayFromResponse, getJsonArrayFromResponse } from '../../queries/gallery/gallery.process-data';
 
 import {GalleryOverviewStyled} from './gallery-overview.styles';
+import { Redirect } from 'react-router-dom';
 
 
 
@@ -29,7 +30,7 @@ const GalleryOverview = () => {
     const { loading, error, data } = useQuery(GET_GALLERY);
 
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};
+    if (error) return <Redirect to={'/404'}/>
 
     const images = getJsonArrayFromResponse(data);
 

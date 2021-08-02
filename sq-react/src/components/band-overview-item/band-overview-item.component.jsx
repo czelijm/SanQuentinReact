@@ -18,8 +18,8 @@ const BandItem = ({bandMember,classes}) => {
     const [isSet, setIsSet] = useState(false);
     
 
-    console.log('render');
-    console.log(render);
+    // console.log('render');
+    // console.log(render);
 
     useEffect(() => {
       if(!isSet) setModStyleClassCard('grey');

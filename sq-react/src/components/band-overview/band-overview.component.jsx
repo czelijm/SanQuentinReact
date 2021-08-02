@@ -15,8 +15,8 @@ const BandOverview = ({band}) => {
     // const [x,y,isMobile] = useWindowSize();
     const [,,isMobile] = useWindowSize();
 
-    console.log(isMobile);
-    console.log(band);
+    // console.log(isMobile);
+    // console.log(band);
 
     return(
         <BandOverviewComponent count={band.length}>

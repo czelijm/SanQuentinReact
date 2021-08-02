@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { Box, Grid, Paper, styled } from '@material-ui/core';
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { useWindowSize } from '../../hooks/useWindowSize/useWindowSize';
 import { HomePageGlobalStyle } from '../../pages/homepage/homepage.styles';
 import { getContentFormResponse, getHtmlArrayFromData, getItemsFromRespone } from '../../queries/home/home.process-data';
@@ -18,10 +19,10 @@ const HomePageLarge = () => {
     const { loading, error, data } = useQuery(GET_HOME_PAGE_LARGE);
     const [,,isMobile] = useWindowSize();
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};
+    if (error) return <Redirect to={'/404'}/>
 
     const items = getItemsFromRespone(data)
-    console.log(items);
+    // console.log(items);
 
 
     const itemCount =items.length;

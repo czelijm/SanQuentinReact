@@ -5,12 +5,12 @@ const VideoPlayer = ({videoUrl,thumbnailUrl,className}) =>{
 
     const stopMovie = (e) => {
         e.target.pause();
-        console.log('off');
+        // console.log('off');
       }
       
     const playMovie = (e) => {
         e.target.play();
-        console.log('on');
+        // console.log('on');
       }
 
     return(

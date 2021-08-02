@@ -36,8 +36,8 @@ const VideoOverviewComponent = () => {
                 // setVideos(res.data);
                 const api = prepareUrlAndGetApi(`https://youtube.googleapis.com/youtube/v3`,`playlistItems`,options);
                 const res = await api.get();
-                console.log(res);
-                console.log(getVideosPropsFromResponse(res));
+                // console.log(res);
+                // console.log(getVideosPropsFromResponse(res));
                 
                 setVideos(getVideosIdFromResponse(res));
                 if(error) setError(null);
@@ -53,7 +53,7 @@ const VideoOverviewComponent = () => {
         
     },[]);
 
-    console.log(videos);
+    // console.log(videos);
     // console.log(process.env);
 
     

@@ -8,17 +8,18 @@ import {GET_ALL_NEWS} from '../../queries/news/news.query'
 import SpinnerAbsolute from '../spinner/spinner.component'
 import { getAllNewsDataFromResponse } from '../../queries/news/news.process-data';
 import NewsItem from '../news-item/news-item.component';
+import { Redirect } from 'react-router-dom';
 
 const NewsOverviewContainer = () =>{
     const { loading, error, data } = useQuery(GET_ALL_NEWS);
     // const newsById = useQuery(GET_NEWS_BY_ID,{variables:{id:'cG9zdDoxNQ=='}});
     
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};
+    if (error) return <Redirect to={'/404'}/>
     
     const postsArray = getAllNewsDataFromResponse(data);
     
-    console.log(postsArray);
+    // console.log(postsArray);
     // console.log(newsById);
 
     return(

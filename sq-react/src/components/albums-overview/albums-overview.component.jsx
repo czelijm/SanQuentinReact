@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/client';
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { getAlbumsFromResponse} from '../../queries/albums/albums.process-data';
 import { GET_ALL_ALBUMS } from '../../queries/albums/albums.query';
 import AlbumItem from '../album-item/album-item.component';
@@ -12,11 +13,11 @@ const AlbumsOverview = () => {
     const { loading, error, data } = useQuery(GET_ALL_ALBUMS);
 
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};
+    if (error) return <Redirect to={'/404'}/>
     
     const albums = getAlbumsFromResponse(data);
 
-    console.log(albums);
+    // console.log(albums);
     
 
     return(

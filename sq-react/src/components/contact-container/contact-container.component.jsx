@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/client';
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { getAllContactsDataFromResponse, prepareContactsArray } from '../../queries/contact/contact.process-data';
 import { GET_ALL_CONTACT } from '../../queries/contact/contact.query';
 import ContactOverview from '../contact-overview/contact-overview.component';
@@ -11,7 +12,7 @@ const ContactContainer = () => {
     const { loading, error, data } = useQuery(GET_ALL_CONTACT);
 
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};
+    if (error) return <Redirect to={'/404'}/>
     
     
     const contacts = prepareContactsArray(getAllContactsDataFromResponse(data));

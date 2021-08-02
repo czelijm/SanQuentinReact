@@ -10,6 +10,7 @@ import BandMemberBio from '../band-member-bio/band-member-bio.component';
 import { getAllBandMembersDataFromResponse,  prepareBandMembersArray } from '../../queries/band-members/band-members.process-data';
 import { useWindowSize } from '../../hooks/useWindowSize/useWindowSize';
 import { BandContext } from '../../providers/band/band.provider';
+import { Redirect } from 'react-router-dom';
 
 const BandContainer = () => {
     const { loading, error, data } = useQuery(GET_ALL_BANDMEMBERS);
@@ -18,7 +19,7 @@ const BandContainer = () => {
 
 
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};
+    if (error) return <Redirect to={'/404'}/>
 
     const band = prepareBandMembersArray(getAllBandMembersDataFromResponse(data));
 

@@ -49,7 +49,7 @@ const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
         return columns;
     };
 
-    console.log(images);
+    // console.log(images);
 
     return (
         <GalleryContainer>

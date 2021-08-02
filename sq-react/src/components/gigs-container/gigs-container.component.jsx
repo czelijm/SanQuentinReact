@@ -6,12 +6,13 @@ import { GET_ALL_GIGS } from '../../queries/gigs/gigs.query';
 import SpinnerAbsolute from '../spinner/spinner.component';
 import { getAllGigsDataFromResponse, prepareGigsArray } from '../../queries/gigs/gigs.process-data';
 import GigsOverview from '../gigs-overview/gigs-overview.component';
+import { Redirect } from 'react-router-dom';
 
 const GigsContainer = () =>{
     const { loading, error, data } = useQuery(GET_ALL_GIGS);
 
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};
+    if (error) return <Redirect to={'/404'}/>
 
     const gigs = prepareGigsArray(getAllGigsDataFromResponse(data));
 

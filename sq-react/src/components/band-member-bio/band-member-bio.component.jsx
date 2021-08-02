@@ -19,9 +19,9 @@ const BandMemberBio = () => {
     }, [bandMember])
 
 
-    console.log('choosenBandMember');
-    console.log(img);
-    console.log(isClicked);
+    // console.log('choosenBandMember');
+    // console.log(img);
+    // console.log(isClicked);
 
 
     return(

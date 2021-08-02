@@ -1,5 +1,5 @@
 import React from 'react'
-import {useParams} from 'react-router-dom';
+import {Redirect, useParams} from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import SpinnerAbsolute from '../spinner/spinner.component'
@@ -18,7 +18,7 @@ const GigsItemDetails = () => {
     const { loading, error, data } = useQuery(GET_GIG_BY_ID, {variables:{id:gigId}});
 
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};    
+    if (error) return <Redirect to={'/404'}/>    
 
     const postContent = getGigsDataFromResponse(data);
 

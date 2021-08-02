@@ -1,5 +1,5 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
+import {Redirect, useParams} from 'react-router-dom';
 import {useQuery} from '@apollo/client'
 import { GET_NEWS_BY_ID } from '../../queries/news/news.query';
 import SpinnerAbsolute from '../spinner/spinner.component';
@@ -14,11 +14,11 @@ const NewsItemDetails = ({match}) => {
     // const { loading, error, data } = useQuery(GET_NEWS_BY_ID,{variables:{id:'cG9zdDoxNQ=='}});
     
     if (loading) return <SpinnerAbsolute/>;
-    if (error) {console.log(error); return( <p>Error :(</p>)};    
+    if (error) return <Redirect to={'/404'}/>    
 
     const postContent = getNewsDataFromResponse(data);
 
-    console.log(postContent);
+    // console.log(postContent);
 
     return(
     <NewsDetailsBackgroundPlate>
