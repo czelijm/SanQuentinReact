@@ -24,7 +24,7 @@ export const InfoDiv = styled.div`
 
 
 export const SocialMediaDiv = styled.div`
-    background-color:rgba(0,0,0,0.7);
+    background-color:rgba(0,0,0,0.3);
     overflow: hidden;
     position: relative;
     padding:2px;
@@ -43,7 +43,7 @@ export const Icon = styled.img`
 
 
 export const ContactTitle = styled.h2`
-    background-color:rgba(0,0,0,0.7);
+    background-color:rgba(0,0,0,0.3);
     overflow: hidden;
     position: relative;
     padding:5px;
@@ -63,11 +63,11 @@ export const ContactImage = styled.img`
 `;
 
 export const ContactDescriptionDiv = styled.div`
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color:rgba(0, 0, 0, 0.3);
 `;
 
 export const ContactDescriptionElement = styled.h3`
-    background-color:rgba(0,0,0,0.7);
+    background-color:rgba(0,0,0,0.3);
     overflow: hidden;
     position: relative;
     padding:2px;
