@@ -7,9 +7,11 @@ services:
         ports:
             # - "80:80"
             - "3000:3000"
+            - "5000:5000"
             - "443:443"
             - "35729:35729" #for hotreloading
         volumes: 
+            # - ./sq-react/client:/usr/src/app
             - ./sq-react:/usr/src/app
         #   - .:/usr/src/app
         working_dir: /usr/src/app
@@ -20,7 +22,8 @@ services:
             # - DEBUG=express
             # - NODE_ENV=dev
         # command: tail -f /dev/null #container will not stop on begging
-        command: yarn start #bash
+        # command: yarn start #bash
+        command: yarn dev
 
     wordpress:
         image: wordpress

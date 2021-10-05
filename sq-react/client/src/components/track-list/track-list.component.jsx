@@ -18,7 +18,8 @@ const TrackListComponent = ({trackListID}) => {
                 const options = {
                     part: 'snippet',
                     playlistId:trackListID,
-                    key: process.env.REACT_APP_YT_API_KEY
+                    key: process.env.REACT_APP_YT_API_KEY,
+                    maxResults:25,
                 }
                 try {
                     // const res = await ytApi.get('/users');
@@ -42,8 +43,9 @@ const TrackListComponent = ({trackListID}) => {
             
         },[]);
     
-        // console.log(videos);
+        console.log(videos[0]?.title.split('-'));
         // console.log(process.env);
+        // console.log(trackListID);
     
         
         if(isLoading) return <SpinnerAbsolute/>;
@@ -56,7 +58,7 @@ const TrackListComponent = ({trackListID}) => {
                 return null;
             }} 
             key={i}>
-                {v.description.split('-')[0]}
+                {v.title.split('-')[0]==="SAN QUENTIN "?v.title.split('-')[1]:v.title.split('-')[0]}
             </TrackItem>)}
         </TrackListStyledComponent>
     );

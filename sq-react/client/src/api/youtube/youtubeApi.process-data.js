@@ -17,8 +17,9 @@ export const getVideoIdFromItem = (item) => {
 export const getVideoPropsFromItem = (item) => {
     return {
         id:item.snippet.resourceId.videoId,
+        title:item.snippet.title,
         description: item.snippet.description,
-        thumbnail:item.snippet.thumbnails.maxres.url
+        thumbnail:item.snippet.thumbnails.maxres?.url
     };
 }
 
