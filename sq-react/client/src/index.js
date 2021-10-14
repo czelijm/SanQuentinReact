@@ -15,7 +15,9 @@ import AlbumProvider from './providers/album/album.provider';
 
 const httpLink = new HttpLink(
   {
-     uri: 'http://localhost:8080/graphql' 
+    //  uri: 'http://localhost:8080/graphql' 
+     uri: process.env.REACT_APP_YT_GRAPHQL_URI
+    //  ,credentials: 'include' 
   }
 );
 
@@ -23,9 +25,9 @@ const client = new ApolloClient({
   // uri: 'http://localhost:8080/graphql',
   link:httpLink,
   cache: new InMemoryCache()
-  // ,fetchOptions: {
-  //   mode: 'no-cors'
-  // }
+  ,fetchOptions: {
+    mode: 'no-cors'
+  }
 });
 
 ReactDOM.render(
