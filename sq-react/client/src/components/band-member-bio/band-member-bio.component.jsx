@@ -3,13 +3,13 @@ import React,{useContext, useEffect, useState} from 'react';
 import {BandContext} from '../../providers/band/band.provider';
 import { BackgroundImage } from '../backgorund-image/background-image.styles';
 
-import {BandMemberBioStyled, ImageCol, InfoCol, BandMemberTitle,BioRow,BandMemberImage,BandMemberDescription,DescriptionDiv, BandMemberImageDiv, BandMemberBioDescriptionContainer} from './band-member-bio.styles';
+import {BandMemberBioStyled, ImageCol, InfoCol, BandMemberTitle,BioRow,BandMemberImage,BandMemberDescription,DescriptionDiv, BandMemberBioDescriptionContainer} from './band-member-bio.styles';
 import metalShelf from '../../assets/metal-shelf.jpg';
 
 const BandMemberBio = () => {
     
-    const {bandMember,isClicked} = useContext(BandContext); //readed here; setted in band-member-item;
-    const [img, setImg] = useState(null);
+    const {bandMember} = useContext(BandContext); //readed here; setted in band-member-item;
+    const [, setImg] = useState(null);
     useEffect(() => {
         if(bandMember)
             setImg(bandMember.innerImage)

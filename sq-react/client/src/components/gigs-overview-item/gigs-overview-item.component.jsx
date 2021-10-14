@@ -1,7 +1,7 @@
 import React from 'react';
 import {useLocation } from "react-router-dom";
 
-import {Row, Col} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 
 import { GigsOverviewItemComponent,GigTitle,GigImage,GigDescriptionDiv,GigDescriptionElement,ImageDiv,DetailsButton, ButtonDiv, ColImage, RowStyled, BackgroundImage } from './gigs-overview-item.styles';
 import metalShelf from '../../assets/metal-shelf.jpg';

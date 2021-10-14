@@ -1,5 +1,5 @@
 import { Paper, styled } from "@material-ui/core";
-import Cleanwork from '../../assets/Cleanwork.ttf';
+// import Cleanwork from '../../assets/Cleanwork.ttf';
 
 export const HomePageLargeItemStyled = styled(Paper)(({ theme }) => { return {
     ...theme.typography.body2,

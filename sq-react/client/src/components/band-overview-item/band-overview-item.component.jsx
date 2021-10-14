@@ -1,10 +1,10 @@
-import { Card, CardContent, CardMedia } from '@material-ui/core';
+import { Card, CardMedia } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import React, {useContext, useEffect, useState} from 'react'
 
 import {BandContext} from '../../providers/band/band.provider';
 
-import { BandOverviewItemComponent, BandImage, styles } from './band-overview-item.styles';
+import { styles } from './band-overview-item.styles';
 
 
 

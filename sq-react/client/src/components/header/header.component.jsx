@@ -8,7 +8,7 @@ import {LogoStyled, NavStyled, NavbarStyled, NavDropdownStyled, NavDropdownItemS
 
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import SocialMediaBar from '../social-media-bar/social-media-bar.component';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 // import { alignPropType } from 'react-bootstrap/esm/DropdownMenu';
 
 // const HeaderComponentTest = () => (
@@ -27,7 +27,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => (
     <HeaderContainer>
-        <NavbarStyled collapseOnSelect expand="true" style={{color:'white'}} variant='dark' expand="lg">
+        <NavbarStyled collapseOnSelect style={{color:'white'}} variant='dark' expand="lg">
                 <NavbarStyled.Brand href="/"> <LogoStyled className='logo'/></NavbarStyled.Brand>
             {/* <MobileLogoContainer>
                 <NavbarStyled.Brand href="/"> <LogoStyled className='logo'/></NavbarStyled.Brand>

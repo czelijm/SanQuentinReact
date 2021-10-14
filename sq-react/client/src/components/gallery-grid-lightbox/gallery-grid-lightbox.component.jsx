@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Gallery from 'react-photo-gallery';
-import { FiHeart, FiPrinter, FiShare } from 'react-icons/fi';
-import Lightbox from 'react-spring-lightbox';
+// import { FiHeart, FiPrinter, FiShare } from 'react-icons/fi';
+// import Lightbox from 'react-spring-lightbox';
 
 import GalleryImage from '../gallery-item/gallery-item.component';
 import GalleryButton from '../gallery-button/gallery-button.component';
 
-import {GalleryContainer,LightboxStyled,ImageOverlay} from './gallery-grid-lightbox.styles';
+// import {GalleryContainer,LightboxStyled,ImageOverlay} from './gallery-grid-lightbox.styles';
+import {GalleryContainer,LightboxStyled} from './gallery-grid-lightbox.styles';
 import GalleryLightboxHeader from '../gallery-header/gallery-header.component';
 
 const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
@@ -49,7 +50,7 @@ const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
         return columns;
     };
 
-    // console.log(images);
+    console.log(images);
 
     return (
         <GalleryContainer>

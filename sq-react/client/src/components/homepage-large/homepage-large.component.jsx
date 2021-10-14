@@ -1,15 +1,15 @@
 import { useQuery } from '@apollo/client';
-import { Box, Grid, Paper, styled } from '@material-ui/core';
+import { Box, Grid} from '@material-ui/core';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useWindowSize } from '../../hooks/useWindowSize/useWindowSize';
 import { HomePageGlobalStyle } from '../../pages/homepage/homepage.styles';
-import { getContentFormResponse, getHtmlArrayFromData, getItemsFromRespone } from '../../queries/home/home.process-data';
+import { getItemsFromRespone } from '../../queries/home/home.process-data';
 import { GET_HOME_PAGE_LARGE } from '../../queries/home/home.query';
 import  HomePageLargeItem from '../homepage-large-item/homepage-large-item.component';
 import SpinnerAbsolute from '../spinner/spinner.component';
-import VideoPlayer from '../video-player/video-player.component';
-import { boxStyles, boxStylesFlex, gridMobileStyles, logoBox, LogoTitle } from './homepage-large.styles';
+// import VideoPlayer from '../video-player/video-player.component';
+import { boxStylesFlex, gridMobileStyles, logoBox, LogoTitle } from './homepage-large.styles';
 
 
 // import moduleName from './homepage.styles'

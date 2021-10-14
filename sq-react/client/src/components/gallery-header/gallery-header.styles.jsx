@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Color from 'color';
-import GalleryButton from '../gallery-button/gallery-button.component';
+// import GalleryButton from '../gallery-button/gallery-button.component';
 
 export const GalleryHeading = styled.h2`
     margin: 0 0 5px 0;

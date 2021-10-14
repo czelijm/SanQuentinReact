@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import {Redirect, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import './App.css';
 
 // import HomePage from './pages/homepage/homepage.component';
@@ -14,7 +14,7 @@ import Header from './components/header/header.component';
 
 import {GlobalStyle} from './global.styles'
 // import FriendsComponent from './pages/firends/friends.component';
-import { HomePageGlobalStyle } from './pages/homepage/homepage.styles';
+// import { HomePageGlobalStyle } from './pages/homepage/homepage.styles';
 import SpinnerAbsolute from './components/spinner/spinner.component';
 // import ErrorComponent from './pages/error/error.component';
 // import { Switch } from '@material-ui/core';

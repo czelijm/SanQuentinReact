@@ -25,7 +25,7 @@ const BandContainer = () => {
 
 
 
-    console.log(band);
+    // console.log(band);
     // console.log(getTagElementArrayFromStringContent(band[0].content, 'img'));
     // console.log(prepareBandMember(band[0]));
     // console.log(prepareBandMembersArray(band));

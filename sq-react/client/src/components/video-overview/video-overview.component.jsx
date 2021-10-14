@@ -5,7 +5,7 @@ import SpinnerAbsolute from '../spinner/spinner.component';
 import VideoOverviewItem from '../video-overview-item/video-overview-item.component';
 
 import {prepareUrlAndGetApi} from '../../api/youtube/youtubeApi.base'
-import { getItemsFromResponse, getVideoPropsFromItem, getVideosIdFromResponse, getVideosPropsFromItems, getVideosPropsFromResponse } from '../../api/youtube/youtubeApi.process-data';
+import {getVideosIdFromResponse } from '../../api/youtube/youtubeApi.process-data';
 
 
 import {VideoOverviewCoponentStyled} from './video-overview.styles'

@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import {Spinner} from 'react-bootstrap';
-import waitGit from '../../assets/wait.gif';
 import { SpinnerAdjustable } from '../spinner/spinner.component';
 
 import {VideoOverviewComponentStyled,IFrame} from './video-overview-item.styles';

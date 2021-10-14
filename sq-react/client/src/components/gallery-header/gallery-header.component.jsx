@@ -1,7 +1,8 @@
 import React from 'react';
 import { IoIosClose } from 'react-icons/io';
 
-import { CloseButton, GalleryHeading, GallerySubheading, LeftSideDescriptionContainer, PageIndicator, RightSideContainer, TopHeaderBar } from './gallery-header.styles'
+// import { CloseButton, GalleryHeading, GallerySubheading, LeftSideDescriptionContainer, PageIndicator, RightSideContainer, TopHeaderBar } from './gallery-header.styles'
+import { CloseButton, LeftSideDescriptionContainer, PageIndicator, RightSideContainer, TopHeaderBar } from './gallery-header.styles'
 
 const GalleryLightboxHeader = ({ currentIndex, galleryTitle, images, onClose }) => (
     <TopHeaderBar>

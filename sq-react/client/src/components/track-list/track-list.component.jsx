@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Redirect, useHistory } from 'react-router-dom';
+// import {useHistory } from 'react-router-dom';
 import { prepareUrlAndGetApi } from '../../api/youtube/youtubeApi.base';
-import { getVideosIdFromResponse, getVideosPropsFromResponse } from '../../api/youtube/youtubeApi.process-data';
+import {getVideosPropsFromResponse } from '../../api/youtube/youtubeApi.process-data';
 import SpinnerAbsolute from '../spinner/spinner.component';
 import { TrackItem, TrackListStyledComponent } from './track-list.styles';
 
@@ -11,7 +11,7 @@ const TrackListComponent = ({trackListID}) => {
         const [videos,setVideos] = useState([]);  
         const [isLoading,setIsLoading] = useState(true);  
         const [error,setError] = useState(null);  
-        const history = useHistory();
+        // const history = useHistory();
     
         useEffect(() =>{
             async function fetchData() {

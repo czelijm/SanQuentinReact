@@ -1,12 +1,12 @@
 import { useQuery } from '@apollo/client';
-import React, { useState } from 'react';
+import React from 'react';
 // import Lightbox from 'react-spring-lightbox';
 
 import SpinnerAbsolute from '../spinner/spinner.component';
 import GalleryGridLightbox from '../gallery-grid-lightbox/gallery-grid-lightbox.component';
 
 import { GET_GALLERY } from '../../queries/gallery/gallery.querry';
-import { getHtmlArrayFromResponse, getJsonArrayFromResponse } from '../../queries/gallery/gallery.process-data';
+import { getJsonArrayFromResponse } from '../../queries/gallery/gallery.process-data';
 
 import {GalleryOverviewStyled} from './gallery-overview.styles';
 import { Redirect } from 'react-router-dom';

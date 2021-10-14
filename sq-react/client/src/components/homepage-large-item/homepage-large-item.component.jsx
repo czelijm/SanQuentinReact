@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 // import { Paper, styled } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { HomePageLargeItemStyled, styles } from './homepage-large-item.styles';
-import VideoPlayer from '../video-player/video-player.component';
-import Cleanwork from '../../assets/Cleanwork.ttf';
+// import VideoPlayer from '../video-player/video-player.component';
+// import Cleanwork from '../../assets/Cleanwork.ttf';
 
-import WebFont from 'webfontloader';
+// import WebFont from 'webfontloader';
 
 
 const HomePageLargeItem = ({media}) => {     
@@ -34,15 +34,15 @@ const HomePageLargeItem = ({media}) => {
 
     const {image, video, name} = media;
 
-    const stopMovie = (e) => {
-        e.target.pause();
-        // console.log('off');
-      }
+    // const stopMovie = (e) => {
+    //     e.target.pause();
+    //     // console.log('off');
+    //   }
       
-    const playMovie = (e) => {
-        e.target.play();
-        // console.log('on');
-      }
+    // const playMovie = (e) => {
+    //     e.target.play();
+    //     // console.log('on');
+    //   }
 
     // console.log(media);
     

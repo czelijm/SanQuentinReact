@@ -1,11 +1,11 @@
-import { useLazyQuery, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import React from 'react';
-import { Redirect } from 'react-router-dom';
-import { useStateWithLocalStorage, useStateWithSessionStorage, useStateWithSessionStorageForJSON } from '../../hooks/useStateWithStorage/useStateWithStorage';
+// import { Redirect } from 'react-router-dom';
+import { useStateWithSessionStorageForJSON } from '../../hooks/useStateWithStorage/useStateWithStorage';
 import { getItemsFromRespone } from '../../queries/social-media/social-media.process-data';
 import { GET_SOCIAL_MEDIA } from '../../queries/social-media/social-media.querry';
 import { MoreSocialMediaComponentObjectArray } from '../more-socialmedia/more-socialmedia.component';
-import SpinnerAbsolute, { SpinnerAdjustable } from '../spinner/spinner.component';
+import { SpinnerAdjustable } from '../spinner/spinner.component';
 import { Anchor, PlatformIcon} from './social-media-bar.styles';
 
 // const RenderFunction = ({ children }) => children();

@@ -1,5 +1,5 @@
 export const getContentFormResponse = (resp) =>{
-    return resp.pageBy.content
+    return resp.pageBy?.content
 }
 
 export const getHtmlArrayFromData = (data) =>{
@@ -27,6 +27,7 @@ export const getJsonArrayFromResponse = (resp) =>{
 }
 
 export const convertToJsonObjectForLightbox= (src,height,width) => {
+    // console.log({height,width})
     return {
         src,
         // loading: 'lazy',
