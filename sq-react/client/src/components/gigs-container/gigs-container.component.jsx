@@ -17,7 +17,7 @@ const GigsContainer = () =>{
     const gigs = prepareGigsArray(getAllGigsDataFromResponse(data));
 
     // console.log(data);
-    console.log(gigs);
+    // console.log(gigs);
 
     return(
         <div>

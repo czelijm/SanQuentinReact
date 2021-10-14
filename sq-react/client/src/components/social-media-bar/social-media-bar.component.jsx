@@ -59,7 +59,7 @@ const SocialMediaBar = () => {
     // const [getSocials, {loading, data}] = useLazyQuery(GET_SOCIAL_MEDIA);
     if(!value) {
         if (loading) return <SpinnerAdjustable width={70} height={70}/> 
-        if (error) {console.log(error); return( <p>Error :(</p>)};
+        if (error) {console.log(error); return( <p>Unable to connect to the server...</p>)};
         
         socials = getItemsFromRespone(data);
         setValue(socials)
@@ -67,8 +67,8 @@ const SocialMediaBar = () => {
     } else {
         socials = value;
     }
-    console.log(value);
-    console.log(socials);
+    // console.log(value);
+    // console.log(socials);
 
     return(
         <div>
