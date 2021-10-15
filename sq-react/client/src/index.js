@@ -13,10 +13,12 @@ import reportWebVitals from './reportWebVitals';
 import BandProvider from './providers/band/band.provider';
 import AlbumProvider from './providers/album/album.provider';
 
+import {GRAPHQL_URI} from './utilities/constants';
+
 const httpLink = new HttpLink(
   {
     //  uri: 'http://localhost:8080/graphql' 
-     uri: process.env.REACT_APP_YT_GRAPHQL_URI
+     uri: GRAPHQL_URI
     //  ,credentials: 'include' 
     //
   }
