@@ -15,7 +15,7 @@ export const useStateWithStorage = (localStorageKey,storageType) => {
    
   React.useEffect(() => {
     storageType.setItem(localStorageKey, value);
-  }, [value]);
+  }, [localStorageKey, storageType, value]);
    
     return [value, setValue];
 };
@@ -57,7 +57,7 @@ export const useStateWithStorageForJSON = (localStorageKey,storageType) => {
    
     React.useEffect(() => {
         storageType.setItem(localStorageKey, JSON.stringify(value));
-    }, [value]);
+    }, [localStorageKey, storageType, value]);
    
     return [value, setValue];
   };

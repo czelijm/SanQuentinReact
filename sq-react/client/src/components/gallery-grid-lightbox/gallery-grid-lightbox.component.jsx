@@ -9,7 +9,7 @@ import GalleryButton from '../gallery-button/gallery-button.component';
 // import {GalleryContainer,LightboxStyled,ImageOverlay} from './gallery-grid-lightbox.styles';
 import {GalleryContainer,LightboxStyled} from './gallery-grid-lightbox.styles';
 import GalleryLightboxHeader from '../gallery-header/gallery-header.component';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
 const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
     const [currentImageIndex, setCurrentIndex] = useState(0);

@@ -1,4 +1,5 @@
 import React, {useEffect,useState} from 'react';
+import { Redirect } from 'react-router-dom';
 // import axios from 'axios'
 
 import SpinnerAbsolute from '../spinner/spinner.component';
@@ -40,13 +41,12 @@ const VideoOverviewComponent = () => {
                 // console.log(getVideosPropsFromResponse(res));
                 
                 setVideos(getVideosIdFromResponse(res));
-                if(error) setError(null);
+                // if(error) setError(null);
             } catch (er) {
                 setError(er);
             } finally {
                 setIsLoading(false);
             }
-            
         }
 
         fetchData();
@@ -58,7 +58,7 @@ const VideoOverviewComponent = () => {
 
     
     if(isLoading) return <SpinnerAbsolute/>;
-    if(error) return <div>Error occured :(</div>;
+    if(error) return <Redirect to={'/404'}/>;
 
     return(
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 // import {useHistory } from 'react-router-dom';
 import { prepareUrlAndGetApi } from '../../api/youtube/youtubeApi.base';
 import {getVideosPropsFromResponse } from '../../api/youtube/youtubeApi.process-data';
@@ -30,7 +31,7 @@ const TrackListComponent = ({trackListID}) => {
                     // console.log(getVideosPropsFromResponse(res));
                     
                     setVideos(getVideosPropsFromResponse(res));
-                    if(error) setError(null);
+                    // if(error) setError(null);
                 } catch (er) {
                     setError(er);
                 } finally {
@@ -41,7 +42,7 @@ const TrackListComponent = ({trackListID}) => {
     
             fetchData();
             
-        },[]);
+        },[trackListID]);
     
         console.log(videos[0]?.title.split('-'));
         // console.log(process.env);
@@ -49,7 +50,7 @@ const TrackListComponent = ({trackListID}) => {
     
         
         if(isLoading) return <SpinnerAbsolute/>;
-        if(error) return <div>Error occured :(</div>;
+        if(error) return <Redirect to={'/404'}/>;
     
     return (
         <TrackListStyledComponent>

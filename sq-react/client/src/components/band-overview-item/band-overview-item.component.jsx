@@ -15,16 +15,19 @@ const BandItem = ({bandMember,classes}) => {
     const { image} = bandMember;
     const {setBandMember,setIsClicked,render,setRender} = useContext(BandContext);
     const [modStyleClassCard, setModStyleClassCard] = useState('grey')
-    const [isSet, setIsSet] = useState(false);
+    const [changeColor, setChangeColor] = useState(false);
     
 
-    // console.log('render');
-    // console.log(render);
+    useEffect(() =>{
 
-    useEffect(() => {
-      if(!isSet) setModStyleClassCard('grey');
-      setIsSet(false);
-    }, [render])
+      if(render){
+          setModStyleClassCard(changeColor?'red':'grey')  
+          if(changeColor) setChangeColor(false);
+          if(render) setRender(false);
+      }
+
+    }, [render, changeColor, setRender]);
+
 
     return(
         // <BandOverviewItemComponent>
@@ -33,7 +36,15 @@ const BandItem = ({bandMember,classes}) => {
         //     {/* {descriptionArray.map((d,index)=><p key={index}>{d}</p>)}
         //     {innerImage?<BandInnerImage src={innerImage}/>:<div></div>} */}
         // </BandOverviewItemComponent>
-        <Card sx={{"border-color":`${modStyleClassCard}`}} className={classes.card} onClick={()=>{setBandMember(bandMember); setModStyleClassCard('red'); setIsSet(true); setRender(!render); setIsClicked();}}>
+        <Card sx={{"border-color":`${modStyleClassCard}`}} className={classes.card} onClick={()=>{
+          setBandMember(bandMember);
+
+          setChangeColor(true);
+          setRender(true); 
+
+
+          setIsClicked();
+          }}>
       {/* <CardActionArea> */}
         <CardMedia className={classes.media} image={image} />
         {/* <CardContent className={classes.content}>
