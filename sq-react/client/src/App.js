@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom';
+import CookieConsent from "react-cookie-consent";
 import './App.css';
 
 // import HomePage from './pages/homepage/homepage.component';
@@ -58,6 +59,16 @@ function App() {
         </Suspense>
           {/* <Route component={ErrorComponent} /> */}
       </Switch>
+      <CookieConsent 
+        location="bottom"
+        displayText="Korzystając z tej strony zgadzasz się na wykorzystywanie plików cookies."
+        buttonText="Tak jest!!!"
+        cookieName="sanQuentinPlCookie"
+        style={{ background: "#121317", color: "#f2fdff", fontSize: "15px"}}
+        buttonStyle={{ color: "#f2fdff", "background-color":"#da1b2b", fontSize: "15px" }}
+      >
+        Ta strona korzysta z plików cookie, aby ułatwić korzystanie ze strony internetowej.
+      </CookieConsent>
     </div>
   );
 }
