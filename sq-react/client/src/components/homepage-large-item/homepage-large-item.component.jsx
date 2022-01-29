@@ -34,6 +34,8 @@ const HomePageLargeItem = ({media}) => {
 
     const {image, video, name} = media;
 
+    //console.log({image, video, name});
+
     // const stopMovie = (e) => {
     //     e.target.pause();
     //     // console.log('off');

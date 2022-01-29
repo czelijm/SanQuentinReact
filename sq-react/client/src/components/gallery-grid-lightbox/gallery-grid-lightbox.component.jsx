@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Gallery from 'react-photo-gallery';
 // import { FiHeart, FiPrinter, FiShare } from 'react-icons/fi';
 // import Lightbox from 'react-spring-lightbox';
@@ -14,11 +14,11 @@ import GalleryLightboxHeader from '../gallery-header/gallery-header.component';
 const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
     const [currentImageIndex, setCurrentIndex] = useState(0);
 
-    const [clientSide, setClientSide] = useState(false);
+    // const [clientSide, setClientSide] = useState(false);
     const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
     // const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-    useEffect(() => {setClientSide(true); }, []);
+    // useEffect(() => {setClientSide(true); }, []);
     
 
     const openLightbox = (e, { index }) => {
@@ -42,23 +42,23 @@ const GalleryGridLightbox = ({images,imageMasonryDirection}) => {
      *
      * @int containerWidth The current width of the image grid
      */
-    const columnConfig = (containerWidth) => {
-        let columns = 1;
-        if (containerWidth >= 500) columns = 2;
-        if (containerWidth >= 900) columns = 3;
-        if (containerWidth >= 1500) columns = 4;
+    // const columnConfig = (containerWidth) => {
+    //     let columns = 1;
+    //     if (containerWidth >= 500) columns = 2;
+    //     if (containerWidth >= 900) columns = 3;
+    //     // if (containerWidth >= 1500) columns = 4;
 
-        return columns;
-    };
+    //     return columns;
+    // };
 
-    console.log(images);
+    // console.log(images);
     // if (isNaN( images[0].height)) return window.location.reload();
 
     return (
         <GalleryContainer>
-            {clientSide && (
+            {(
                     <Gallery
-                        columns={columnConfig}
+                        // columns={columnConfig}
                         direction={imageMasonryDirection}
                         margin={6}
                         onClick={openLightbox}

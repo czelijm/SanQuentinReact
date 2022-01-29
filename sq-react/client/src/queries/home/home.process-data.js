@@ -13,7 +13,7 @@ export const getHtmlArrayFromData = (data) =>{
     const videos = [...mockHtml.getElementsByTagName('video')].map(v=>v.src);
     const images = [...mockHtml.getElementsByTagName('img')].map(i=>i.src);
     const names = [...mockHtml.getElementsByTagName('p')].map(p=>p.innerText);
-    // console.log(names);
+    // console.log(images);
 
     return videos.map((v,i)=>({video:v,'image':images[i],name:names[i]}));
 }

@@ -32,10 +32,13 @@ const GalleryOverview = () => {
     if (loading) return <SpinnerAbsolute/>;
     if (error) return <Redirect to={'/404'}/>
 
+    // console.log(data)
+
     const images = getJsonArrayFromResponse(data);
+    // console.log(images);
 
     return ( 
-        <GalleryOverviewStyled>
+        images.length>0 && <GalleryOverviewStyled>
             <GalleryGridLightbox images={images} imageMasonryDirection="column"/>
         </GalleryOverviewStyled>
     )

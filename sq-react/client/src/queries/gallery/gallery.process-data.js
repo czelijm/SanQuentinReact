@@ -17,7 +17,7 @@ export const getJsonArrayFromData = (data) =>{
     var mockHtml = document.createElement( 'html' );
     mockHtml.innerHTML = data;
     // const arr = [...mockHtml.getElementsByTagName('img')].map(p=>p.innerText);
-    console.log([...mockHtml.getElementsByTagName('img')]);
+    // console.log([...mockHtml.getElementsByTagName('img')]);
     return [...mockHtml.getElementsByTagName('img')].map(i=>convertToJsonObjectForLightbox(i));
 }
 

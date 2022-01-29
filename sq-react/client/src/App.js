@@ -61,13 +61,13 @@ function App() {
       </Switch>
       <CookieConsent 
         location="bottom"
-        displayText="Korzystając z tej strony zgadzasz się na wykorzystywanie plików cookies."
+        displayText="Korzystając z tej strony zgadzasz się na używanie plików cookies."
         buttonText="Tak jest!!!"
         cookieName="sanQuentinPlCookie"
         style={{ background: "#121317", color: "#f2fdff", fontSize: "15px"}}
         buttonStyle={{ color: "#f2fdff", "background-color":"#da1b2b", fontSize: "15px" }}
       >
-        Ta strona korzysta z plików cookie, aby ułatwić korzystanie ze strony internetowej.
+        Ta strona używa z pliki cookies, aby ułatwić korzystanie ze strony internetowej.
       </CookieConsent>
     </div>
   );

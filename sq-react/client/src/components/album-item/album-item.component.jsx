@@ -27,8 +27,8 @@ const AlbumItem = ({album}) => {
                 <MoreSocialMediaComponent linksArray={mediaPlatformsArray.slice(3)} iconArray={iconArray.slice(3)}/>
             </StreamingMediaDiv>
             <ButtonDiv>
-                {/* <DetailsButton  to={`${pathname}/${id}`}  style={{"width":"100%"}}>Obczai szczegóły!</DetailsButton> */}
-                <DetailsButton type="button"  onClick={ ()=>{ setAlbum(album);  history.push( `${pathname}/${id}`)}}  style={{"width":"100%"}}>Obczai szczegóły!</DetailsButton>
+                {/* <DetailsButton  to={`${pathname}/${id}`}  style={{"width":"100%"}}>Obczaj szczegóły!</DetailsButton> */}
+                <DetailsButton type="button"  onClick={ ()=>{ setAlbum(album);  history.push( `${pathname}/${id}`)}}  style={{"width":"100%"}}>Obczaj szczegóły!</DetailsButton>
             </ButtonDiv>
         </AlbumItemComponentStyled>
     );
